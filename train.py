@@ -22,7 +22,8 @@ from core.dataset import Dataset
 from core.yolov3 import YOLOv3, decode, compute_loss
 from core.config import cfg
 
-trainset = Dataset('train')
+#trainset = Dataset('train')
+trainset = Dataset('./root/datatmp/maguilera/DOTA-0_29/train/images/')
 logdir = "./data/log"
 steps_per_epoch = len(trainset)
 global_steps = tf.Variable(1, trainable=False, dtype=tf.int64)
