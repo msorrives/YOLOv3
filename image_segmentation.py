@@ -8,19 +8,22 @@ import os
 # Using cv2.imread() method
 # to read the image
 img = cv2.imread("docs/kite.jpg")
-
 print("imread")
 # Change the current directory
 # to specified directory
 os.chdir("docs/Prueba")
-
+x=0
+y=0
+h=1000
+w=1000
+crop_img = img[y:y+h, x:x+w]
 # Filename
-filename = 'savedImage2.jpg'
+filename = 'savedImage3.jpg'
 # Using cv2.imwrite() method
 # Saving the image
-cv2.imwrite(filename, img)
-
+cv2.imwrite(filename, crop_img)
 print('Successfully saved')
+
 
 
 
