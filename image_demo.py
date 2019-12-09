@@ -24,7 +24,7 @@ from core.yolov3 import YOLOv3, decode
 import cv2
 
 input_size = 416
-image_path = "./docs/kite.jpg"
+image_path = "docs/kite.jpg"
 
 input_layer  = tf.keras.layers.Input([input_size, input_size, 3])
 feature_maps = YOLOv3(input_layer)
