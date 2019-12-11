@@ -1,28 +1,31 @@
-#from core.dataset import Dataset
-#trainset = Dataset('./root/datatmp/maguilera/DOTA-0_29/train/images/')
-#image_path = "./docs/kite.jpg"
-
 import cv2
 import os
+import glob
 
-# Using cv2.imread() method
-# to read the image
-img = cv2.imread("docs/kite.jpg")
-print("imread")
-# Change the current directory
-# to specified directory
-os.chdir("docs/Prueba")
-x=0
-y=0
-h=1000
-w=1000
-crop_img = img[y:y+h, x:x+w]
-# Filename
-filename = 'savedImage3.jpg'
-# Using cv2.imwrite() method
-# Saving the image
-cv2.imwrite(filename, crop_img)
-print('Successfully saved')
+for file in glob.glob('docs/DOTA29_Prueba/*.png'):
+    img = cv2.imread(file)
+    x = 0
+    y = 0
+    h = 100
+    w = 100
+    crop_img = img[y:y + h, x:x + w]
+    name, extension = os.path.splitext(os.path.basename(file))
+    print(name)
+    print(extension)
+    filename = name + "_0_0" + extension
+    print(filename)
+    print(os.path.isfile(filename))
+    if os.path.isfile(filename):
+        print("File exist")
+        #os.revome(filename)
+        break
+    else:
+        print("File not exist")
+        #os.chdir("docs/Prueba")
+        output_directory = 'docs/Prueba'
+        imcrop = cv2.imwrite(os.path.join(output_directory, filename), crop_img)
+        #print(filename)
+        print('Successfully saved')
 
 
 
@@ -31,6 +34,49 @@ print('Successfully saved')
 
 
 
+
+#----------------------------------------------
+#for filename in glob.glob('docs/DOTA29_Prueba/*.png'): #assuming gif
+#    print(filename)
+#    img = cv2.imread(filename)
+#    os.chdir("docs/Prueba")
+#    x = 0
+#    y = 0
+#    h = 100
+#    w = 100
+#    crop_img = img[y:y + h, x:x + w]
+#    filename = 'savedImage.png'
+#    cv2.imwrite(filename, crop_img)
+
+#print('Successfully saved')
+#----------------------------------------------
+#import cv2
+#import os
+
+## Using cv2.imread() method
+## to read the image
+#img = cv2.imread("docs/kite.jpg")
+#print("imread")
+
+## Change the current directory
+## to specified directory
+#os.chdir("docs/Prueba")
+
+#x= 0
+#y= 100
+#h= 1000
+#w= 1000
+#crop_img = img[y:y+h, x:x+w]
+
+## Filename
+#filename = 'savedImage3.jpg'
+
+
+## Using cv2.imwrite() method
+## Saving the image
+#cv2.imwrite(filename, crop_img)
+#print('Successfully saved')
+#----------------------------------------------
 #def segmentize (image_path, segment_width=200, segment_height=50):
 #    # Croping Formula ==> y:h, x:w
 #    idx, x_axis, x_width,  = 1, 0, segment_width
