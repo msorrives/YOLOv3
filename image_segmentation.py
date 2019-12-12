@@ -4,11 +4,11 @@ import glob
 
 for file in glob.glob('docs/DOTA29_Prueba/*.png'):
     img = cv2.imread(file)
-    #----- Corte 0 - 0
-    x = 0
+    #----- Corte 0 - 0 A
+    x = 10
     y = 0
-    h = 100
-    w = 100
+    h = 126
+    w = 87
     crop_img1 = img[y:y + h, x:x + w]
     name, extension = os.path.splitext(os.path.basename(file))
     print(name)
@@ -16,25 +16,25 @@ for file in glob.glob('docs/DOTA29_Prueba/*.png'):
     filename1 = name + "_0_0" + extension
     print(filename1)
     print(os.path.isfile(filename1))
-    #----- Corte 0 - 1
-    x = 0
-    y = 0
-    h = 100
-    w = 100
+    #----- Corte 0 - 1 C
+    x = 10
+    y = 126
+    h = 126
+    w = 87
     crop_img2 = img[y:y + h, x:x + w]
     filename2 = name + "_0_1" + extension
-    # ----- Corte 1 - 0
-    x = 0
+    # ----- Corte 1 - 0 B
+    x = 97
     y = 0
-    h = 100
-    w = 100
+    h = 126
+    w = 87
     crop_img3 = img[y:y + h, x:x + w]
     filename3 = name + "_1_0" + extension
-    # ----- Corte 1 - 1
-    x = 0
-    y = 0
-    h = 100
-    w = 100
+    # ----- Corte 1 - 1 D
+    x = 97
+    y = 126
+    h = 126
+    w = 87
     crop_img4 = img[y:y + h, x:x + w]
     filename4 = name + "_1_1" + extension
     # -----
