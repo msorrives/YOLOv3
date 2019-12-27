@@ -1,67 +1,49 @@
 import cv2
 import os
 import glob
+import numpy
 
 for file in glob.glob('docs/DOTA29_Prueba/*.png'):
     img = cv2.imread(file)
-    #----- Corte 0 - 0 A
-    x = 10
-    y = 0
-    h = 126
-    w = 87
-    crop_img1 = img[y:y + h, x:x + w]
-    name, extension = os.path.splitext(os.path.basename(file))
-    print(name)
-    print(extension)
-    filename1 = name + "_0_0" + extension
-    print(filename1)
-    print(os.path.isfile(filename1))
-    #----- Corte 0 - 1 C
-    x = 10
-    y = 126
-    h = 126
-    w = 87
-    crop_img2 = img[y:y + h, x:x + w]
-    filename2 = name + "_0_1" + extension
-    # ----- Corte 1 - 0 B
-    x = 97
-    y = 0
-    h = 126
-    w = 87
-    crop_img3 = img[y:y + h, x:x + w]
-    filename3 = name + "_1_0" + extension
-    # ----- Corte 1 - 1 D
-    x = 97
-    y = 126
-    h = 126
-    w = 87
-    crop_img4 = img[y:y + h, x:x + w]
-    filename4 = name + "_1_1" + extension
-    # -----
-    if os.path.isfile(filename1):
-        print("File exist")
-        break
-    elif os.path.isfile(filename2):
-        print("File exist")
-        break
-    elif os.path.isfile(filename3):
-        print("File exist")
-        break
-    elif os.path.isfile(filename4):
-        print("File exist")
-        break
+    height = img.shape[0]
+    width = img.shape[1]
+
+    if height > 416 and width > 416:
+        #M = height // 416
+        #N = width // 416
+        #print(range(M))
+        #print(range(M))
+
+        for y in range(0, img.shape[0], 416):
+            for x in range(0, img.shape[1], 416):
+                #croppedImage = img[startRow:endRow, startCol:endCol]
+                #crop_img = img[y:y + h, x:x + w]
+                crop_img = img[y:y + 416, x:x + 416]
+                name, extension = os.path.splitext(os.path.basename(file))
+                print(name)
+                print(extension)
+                name1 = name + "_" + str(y)
+                name2 = name1 + "_" + str(x)
+                print(str(y))
+                print(str(x))
+                filename = name2 + extension
+                print(filename)
+
+                if os.path.isfile(filename):
+                    print("File exist")
+                    break
+                else:
+                    print("File not exist")
+                    output_directory = 'docs/Prueba'
+                    if img.shape[0] < 416 or img.shape[1] < 416:
+                        break
+                    else:
+                        cv2.imwrite(os.path.join(output_directory, filename), crop_img)
+
+                    print('Successfully saved')
     else:
-        print("File not exist")
-        output_directory = 'docs/Prueba'
-        cv2.imwrite(os.path.join(output_directory, filename1), crop_img1)
-        cv2.imwrite(os.path.join(output_directory, filename2), crop_img2)
-        cv2.imwrite(os.path.join(output_directory, filename3), crop_img3)
-        cv2.imwrite(os.path.join(output_directory, filename4), crop_img4)
-        print('Successfully saved')
-
-
-
-
+        print("No 416 image") 
+        print("Keep calm! Image not deleted in home") 
 
 
 
