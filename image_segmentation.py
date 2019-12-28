@@ -9,10 +9,6 @@ for file in glob.glob('docs/DOTA29_Prueba/*.png'):
     width = img.shape[1]
 
     if height > 416 and width > 416:
-        #M = height // 416
-        #N = width // 416
-        #print(range(M))
-        #print(range(M))
 
         for y in range(0, img.shape[0], 416):
             for x in range(0, img.shape[1], 416):
@@ -35,12 +31,12 @@ for file in glob.glob('docs/DOTA29_Prueba/*.png'):
                 else:
                     print("File not exist")
                     output_directory = 'docs/Prueba'
-                    if img.shape[0] < 416 or img.shape[1] < 416:
+                    if crop_img.shape[0] < 416 or crop_img.shape[1] < 416:
                         break
                     else:
                         cv2.imwrite(os.path.join(output_directory, filename), crop_img)
+                print('Successfully saved')
 
-                    print('Successfully saved')
     else:
         print("No 416 image") 
         print("Keep calm! Image not deleted in home") 
