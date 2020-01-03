@@ -40,66 +40,32 @@ for img in glob.glob('docs/Prueba/*.png'):
                                         print(line1)
 
                                         PosX1 = int(float(line1[0]))
-                                        PosX2 = int(float(line1[1]))
-                                        PosY1 = int(float(line1[2]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
                                         PosY2 = int(float(line1[3]))
-                                        PosH1 = int(float(line1[4]))
-                                        PosH2 = int(float(line1[5]))
-                                        PosW1 = int(float(line1[6]))
-                                        PosW2 = int(float(line1[7]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
 
                                         print(PosX1)
-                                        print(PosX2)
                                         print(PosY1)
+                                        print(PosX2)
                                         print(PosY2)
-                                        print(PosH1)
-                                        print(PosH2)
-                                        print(PosW1)
-                                        print(PosW2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
 
-                                        if PosX1 < 416 and PosX2 < 416:
-                                                print("Equal X fuera bucle")
+                                        if PosX1 < 416 and PosY1 < 416 and PosX2 < 416 and PosY2 < 416 and PosX3 < 416 and PosY3 < 416 and PosX4 < 416 and PosY4 < 416:
                                                 print(PosX1)
-                                                print(PosX2)
 
-                                                if file_name in  glob.glob('docs/Prueba_Labels'):
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
-                                                else:
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(line)
-
-                                        if PosY1 < 416 and PosY2 < 416:
-                                                print("Equal Y fuera bucle")
-                                                print(PosY1)
-                                                print(PosY2)
-
-                                                if file_name in  glob.glob('docs/Prueba_Labels'):
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
-                                                else:
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(line)
-
-                                        if PosH1 < 416 and PosH2 < 416:
-                                                print("Equal H fuera bucle")
-                                                print(PosH1)
-                                                print(PosH2)
-
-                                                if file_name in  glob.glob('docs/Prueba_Labels'):
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
-                                                else:
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(line)
-
-                                        if PosW1 < 416 and PosW2 < 416:
-                                                print("Equal W fuera bucle")
-                                                print(PosW1)
-                                                print(PosW2)
-
-                                                if file_name in  glob.glob('docs/Prueba_Labels'):
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
-                                                else:
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(line)
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
 
                                         while line:
                                                 print("Dentro bucle")
                                                 line = f.readline()
+
                                                 if not line:
                                                         continue
 
@@ -107,48 +73,17 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 print(line1)
 
                                                 PosX1 = int(float(line1[0]))
-                                                PosX2 = int(float(line1[1]))
-                                                PosY1 = int(float(line1[2]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
                                                 PosY2 = int(float(line1[3]))
-                                                PosH1 = int(float(line1[4]))
-                                                PosH2 = int(float(line1[5]))
-                                                PosW1 = int(float(line1[6]))
-                                                PosW2 = int(float(line1[7]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
 
-                                                if PosX1 < 416 and PosX2 < 416:
+                                                if PosX1 < 416 and PosY1 < 416 and PosX2 < 416 and PosY2 < 416 and PosX3 < 416 and PosY3 < 416 and PosX4 < 416 and PosY4 < 416:
                                                         print("Equal X")
                                                         print(PosX1)
-                                                        print(PosX2)
-
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
-                                                        else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
-
-                                                if PosY1 < 416 and PosY2 < 416:
-                                                        print("Equal Y")
-                                                        print(PosY1)
-                                                        print(PosY2)
-
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
-                                                        else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
-
-                                                if PosH1 < 416 and PosH2 < 416:
-                                                        print("Equal H")
-                                                        print(PosH1)
-                                                        print(PosH2)
-
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
-                                                        else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
-
-                                                if PosW1 < 416 and PosW2 < 416:
-                                                        print("Equal W")
-                                                        print(PosW1)
-                                                        print(PosW2)
 
                                                         if file_name in glob.glob('docs/Prueba_Labels'):
                                                                 filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
@@ -159,6 +94,30 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                         elif basename1 == "0" and basename2 == "416":
                                 print("basey == 0 and basex == 416")
+
+                        elif basename1 == "0" and basename2 == "832":
+                                print("basey == 0 and basex == 832")
+
+                        elif basename1 == "0" and basename2 == "1248":
+                                print("basey == 0 and basex == 1248")
+
+                        elif basename1 == "0" and basename2 == "1664":
+                                print("basey == 0 and basex == 1664")
+
+                        elif basename1 == "0" and basename2 == "2080":
+                                print("basey == 0 and basex == 2080")
+
+                        elif basename1 == "0" and basename2 == "2496":
+                                print("basey == 0 and basex == 2496")
+
+                        elif basename1 == "0" and basename2 == "2912":
+                                print("basey == 0 and basex == 2912")
+
+                        elif basename1 == "0" and basename2 == "3328":
+                                print("basey == 0 and basex == 3328")
+
+                        elif basename1 == "0" and basename2 == "3744":
+                                print("basey == 0 and basex == 3744")
 
                                 with open(filename, "r") as f:
                                         line = f.readline()
@@ -184,7 +143,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                         print(PosW1)
                                         print(PosW2)
 
-                                        if PosX1 < 416 and 416 < PosX2 < 832:
+                                        if PosX1 < 416 and 3744 < PosX2 < 4160:
                                                 print("Equal X fuera bucle")
                                                 print(PosX1)
                                                 print(PosX2)
@@ -194,7 +153,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 else:
                                                         filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(line)
 
-                                        if PosY1 < 416 and 416 < PosY2 < 832:
+                                        if PosY1 < 416 and 3744 < PosY2 < 4160:
                                                 print("Equal Y fuera bucle")
                                                 print(PosY1)
                                                 print(PosY2)
@@ -204,7 +163,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 else:
                                                         filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(line)
 
-                                        if PosH1 < 416 and 416 < PosH2 < 832:
+                                        if PosH1 < 416 and 3744 < PosH2 < 4160:
                                                 print("Equal H fuera bucle")
                                                 print(PosH1)
                                                 print(PosH2)
@@ -214,7 +173,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 else:
                                                         filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(line)
 
-                                        if PosW1 < 416 and 416 < PosW2 < 832:
+                                        if PosW1 < 416 and 3744 < PosW2 < 4160:
                                                 print("Equal W fuera bucle")
                                                 print(PosW1)
                                                 print(PosW2)
@@ -242,7 +201,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 PosW1 = int(float(line1[6]))
                                                 PosW2 = int(float(line1[7]))
 
-                                                if PosX1 < 416 and 416 < PosX2 < 832:
+                                                if PosX1 < 416 and 3744 < PosX2 < 4160:
                                                         print("Equal X")
                                                         print(PosX1)
                                                         print(PosX2)
@@ -252,7 +211,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                         else:
                                                                 filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
 
-                                                if PosY1 < 416 and 416 < PosY2 < 832:
+                                                if PosY1 < 416 and 3744 < PosY2 < 4160:
                                                         print("Equal Y")
                                                         print(PosY1)
                                                         print(PosY2)
@@ -262,7 +221,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                         else:
                                                                 filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
 
-                                                if PosH1 < 416 and 416 < PosH2 < 832:
+                                                if PosH1 < 416 and 3744 < PosH2 < 4160:
                                                         print("Equal H")
                                                         print(PosH1)
                                                         print(PosH2)
@@ -272,7 +231,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                         else:
                                                                 filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
 
-                                                if PosW1 < 416 and 416 < PosW2 < 832:
+                                                if PosW1 < 416 and 3744 < PosW2 < 4160:
                                                         print("Equal W")
                                                         print(PosW1)
                                                         print(PosW2)
@@ -284,43 +243,35 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                         f.close()
 
-                        elif basename1 == "0" and basename2 == "832":
-                                print("basey == 0 and basex == 832")
-                        elif basename1 == "0" and basename2 == "1248":
-                                print("basey == 0 and basex == 1248")
-                        elif basename1 == "0" and basename2 == "1664":
-                                print("basey == 0 and basex == 1664")
-                        elif basename1 == "0" and basename2 == "2080":
-                                print("basey == 0 and basex == 2080")
-                        elif basename1 == "0" and basename2 == "2496":
-                                print("basey == 0 and basex == 2496")
-                        elif basename1 == "0" and basename2 == "2912":
-                                print("basey == 0 and basex == 2912")
-                        elif basename1 == "0" and basename2 == "3328":
-                                print("basey == 0 and basex == 3328")
-                        elif basename1 == "0" and basename2 == "3744":
-                                print("basey == 0 and basex == 3744")
-
                         # Y = 416
 
                         elif basename1 == "416" and basename2 == "0":
                                 print("basey == 416 and basex == 0")
+
                         elif basename1 == "416" and basename2 == "416":
                                 print("basey == 416 and basex == 416")
+
                         elif basename1 == "416" and basename2 == "832":
                                 print("basey == 416 and basex == 832")
+
                         elif basename1 == "416" and basename2 == "1248":
                                 print("basey == 416 and basex == 1248")
+
                         elif basename1 == "416" and basename2 == "1664":
                                 print("basey == 416 and basex == 1664")
+
                         elif basename1 == "416" and basename2 == "2080":
                                 print("basey == 416 and basex == 2080")
+
                         elif basename1 == "416" and basename2 == "2496":
                                 print("basey == 416 and basex == 2496")
+
                         elif basename1 == "416" and basename2 == "2912":
                                 print("basey == 416 and basex == 2912")
+
                         elif basename1 == "416" and basename2 == "3328":
                                 print("basey == 416 and basex == 3328")
+
                         elif basename1 == "416" and basename2 == "3744":
                                 print("basey == 416 and basex == 3744")
 
@@ -328,22 +279,31 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                         elif basename1 == "832" and basename2 == "0":
                                 print("basey == 832 and basex == 0")
+
                         elif basename1 == "832" and basename2 == "416":
                                 print("basey == 832 and basex == 416")
+
                         elif basename1 == "832" and basename2 == "832":
                                 print("basey == 832 and basex == 832")
+
                         elif basename1 == "832" and basename2 == "1248":
                                 print("basey == 832 and basex == 1248")
+
                         elif basename1 == "832" and basename2 == "1664":
                                 print("basey == 832 and basex == 1664")
+
                         elif basename1 == "832" and basename2 == "2080":
                                 print("basey == 832 and basex == 2080")
+
                         elif basename1 == "832" and basename2 == "2496":
                                 print("basey == 832 and basex == 2496")
+
                         elif basename1 == "832" and basename2 == "2912":
                                 print("basey == 832 and basex == 2912")
+
                         elif basename1 == "832" and basename2 == "3328":
                                 print("basey == 832 and basex == 3328")
+
                         elif basename1 == "832" and basename2 == "3744":
                                 print("basey == 832 and basex == 3744")
 
@@ -351,22 +311,31 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                         elif basename1 == "1248" and basename2 == "0":
                                 print("basey == 1248 and basex == 0")
+
                         elif basename1 == "1248" and basename2 == "416":
                                 print("basey == 1248 and basex == 416")
+
                         elif basename1 == "1248" and basename2 == "832":
                                 print("basey == 1248 and basex == 832")
+
                         elif basename1 == "1248" and basename2 == "1248":
                                 print("basey == 1248 and basex == 1248")
+
                         elif basename1 == "1248" and basename2 == "1664":
                                 print("basey == 1248 and basex == 1664")
+
                         elif basename1 == "1248" and basename2 == "2080":
                                 print("basey == 1248 and basex == 2080")
+
                         elif basename1 == "1248" and basename2 == "2496":
                                 print("basey == 1248 and basex == 2496")
+
                         elif basename1 == "1248" and basename2 == "2912":
                                 print("basey == 1248 and basex == 2912")
+
                         elif basename1 == "1248" and basename2 == "3328":
                                 print("basey == 1248 and basex == 3328")
+
                         elif basename1 == "1248" and basename2 == "3744":
                                 print("basey == 1248 and basex == 3744")
 
@@ -374,22 +343,31 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                         elif basename1 == "1664" and basename2 == "0":
                                 print("basey == 1664 and basex == 0")
+
                         elif basename1 == "1664" and basename2 == "416":
                                 print("basey == 1664 and basex == 416")
+
                         elif basename1 == "1664" and basename2 == "832":
                                 print("basey == 1664 and basex == 832")
+
                         elif basename1 == "1664" and basename2 == "1248":
                                 print("basey == 1664 and basex == 1248")
+
                         elif basename1 == "1664" and basename2 == "1664":
                                 print("basey == 1664 and basex == 1664")
+
                         elif basename1 == "1664" and basename2 == "2080":
                                 print("basey == 1664 and basex == 2080")
+
                         elif basename1 == "1664" and basename2 == "2496":
                                 print("basey == 1664 and basex == 2496")
+
                         elif basename1 == "1664" and basename2 == "2912":
                                 print("basey == 1664 and basex == 2912")
+
                         elif basename1 == "1664" and basename2 == "3328":
                                 print("basey == 1664 and basex == 3328")
+
                         elif basename1 == "1664" and basename2 == "3744":
                                 print("basey == 1664 and basex == 3744")
 
@@ -397,22 +375,31 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                         elif basename1 == "2080" and basename2 == "0":
                                 print("basey == 2080 and basex == 0")
+
                         elif basename1 == "2080" and basename2 == "416":
                                 print("basey == 2080 and basex == 416")
+
                         elif basename1 == "2080" and basename2 == "832":
                                 print("basey == 2080 and basex == 832")
+
                         elif basename1 == "2080" and basename2 == "1248":
                                 print("basey == 2080 and basex == 1248")
+
                         elif basename1 == "2080" and basename2 == "1664":
                                 print("basey == 2080 and basex == 1664")
+
                         elif basename1 == "2080" and basename2 == "2080":
                                 print("basey == 2080 and basex == 2080")
+
                         elif basename1 == "2080" and basename2 == "2496":
                                 print("basey == 2080 and basex == 2496")
+
                         elif basename1 == "2080" and basename2 == "2912":
                                 print("basey == 2080 and basex == 2912")
+
                         elif basename1 == "2080" and basename2 == "3328":
                                 print("basey == 2080 and basex == 3328")
+
                         elif basename1 == "2080" and basename2 == "3744":
                                 print("basey == 2080 and basex == 3744")
 
@@ -420,22 +407,31 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                         elif basename1 == "2496" and basename2 == "0":
                                 print("basey == 2496 and basex == 0")
+
                         elif basename1 == "2496" and basename2 == "416":
                                 print("basey == 2496 and basex == 416")
+
                         elif basename1 == "2496" and basename2 == "832":
                                 print("basey == 2496 and basex == 832")
+
                         elif basename1 == "2496" and basename2 == "1248":
                                 print("basey == 2496 and basex == 1248")
+
                         elif basename1 == "2496" and basename2 == "1664":
                                 print("basey == 2496 and basex == 1664")
+
                         elif basename1 == "2496" and basename2 == "2080":
                                 print("basey == 2496 and basex == 2080")
+
                         elif basename1 == "2496" and basename2 == "2496":
                                 print("basey == 2496 and basex == 2496")
+
                         elif basename1 == "2496" and basename2 == "2912":
                                 print("basey == 2496 and basex == 2912")
+
                         elif basename1 == "2496" and basename2 == "3328":
                                 print("basey == 2496 and basex == 3328")
+
                         elif basename1 == "2496" and basename2 == "3744":
                                 print("basey == 2496 and basex == 3744")
 
@@ -443,22 +439,31 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                         elif basename1 == "2912" and basename2 == "0":
                                 print("basey == 2912 and basex == 0")
+
                         elif basename1 == "2912" and basename2 == "416":
                                 print("basey == 2912 and basex == 416")
+
                         elif basename1 == "2912" and basename2 == "832":
                                 print("basey == 2912 and basex == 832")
+
                         elif basename1 == "2912" and basename2 == "1248":
                                 print("basey == 2912 and basex == 1248")
+
                         elif basename1 == "2912" and basename2 == "1664":
                                 print("basey == 2912 and basex == 1664")
+
                         elif basename1 == "2912" and basename2 == "2080":
                                 print("basey == 2912 and basex == 2080")
+
                         elif basename1 == "2912" and basename2 == "2496":
                                 print("basey == 2912 and basex == 2496")
+
                         elif basename1 == "2912" and basename2 == "2912":
                                 print("basey == 2912 and basex == 2912")
+
                         elif basename1 == "2912" and basename2 == "3328":
                                 print("basey == 2912 and basex == 3328")
+
                         elif basename1 == "2912" and basename2 == "3744":
                                 print("basey == 2912 and basex == 3744")
 
