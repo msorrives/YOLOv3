@@ -33,6 +33,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                         if basename1 == "0" and basename2 == "0":
                                 print("basey == 0 and basex == 0")
+
                                 with open(filename, "r") as f:
                                         line = f.readline()
                                         print(line)
@@ -81,7 +82,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 PosX4 = int(float(line1[6]))
                                                 PosY4 = int(float(line1[7]))
 
-                                                if PosX1 < 416 and PosY1 < 416 and PosX2 < 416 and PosY2 < 416 and PosX3 < 416 and PosY3 < 416 and PosX4 < 416 and PosY4 < 416:
+                                                if 416 < PosX1 < 832 and PosY1 < 416 and PosX2 < 416 and PosY2 < 416 and PosX3 < 416 and PosY3 < 416 and PosX4 < 416 and PosY4 < 416:
                                                         print("Equal X")
                                                         print(PosX1)
 
@@ -95,26 +96,498 @@ for img in glob.glob('docs/Prueba/*.png'):
                         elif basename1 == "0" and basename2 == "416":
                                 print("basey == 0 and basex == 416")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 416 < PosX1 < 832 and PosY1 < 416 and 416 < PosX2 < 832 and PosY2 < 416 and 416 < PosX3 < 832 and PosY3 < 416 and 416 < PosX4 < 832 and PosY4 < 416:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 416 < PosX1 < 832 and PosY1 < 416 and 416 < PosX2 < 832 and PosY2 < 416 and 416 < PosX3 < 832 and PosY3 < 416 and 416 < PosX4 < 832 and PosY4 < 416:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "0" and basename2 == "832":
                                 print("basey == 0 and basex == 832")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 832 < PosX1 < 1248 and PosY1 < 416 and 832 < PosX2 < 1248 and PosY2 < 416 and 832 < PosX3 < 1248 and PosY3 < 416 and 832 < PosX4 < 1248 and PosY4 < 416:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 832 < PosX1 < 1248 and PosY1 < 416 and 832 < PosX2 < 1248 and PosY2 < 416 and 832 < PosX3 < 1248 and PosY3 < 416 and 832 < PosX4 < 1248 and PosY4 < 416:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "0" and basename2 == "1248":
                                 print("basey == 0 and basex == 1248")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1248 < PosX1 < 1664 and PosY1 < 416 and 1248 < PosX2 < 1664 and PosY2 < 416 and 1248 < PosX3 < 1664 and PosY3 < 416 and 1248 < PosX4 < 1664 and PosY4 < 416:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1248 < PosX1 < 1664 and PosY1 < 416 and 1248 < PosX2 < 1664 and PosY2 < 416 and 1248 < PosX3 < 1664 and PosY3 < 416 and 1248 < PosX4 < 1664 and PosY4 < 416:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "0" and basename2 == "1664":
                                 print("basey == 0 and basex == 1664")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1664 < PosX1 < 2080 and PosY1 < 416 and 1664 < PosX2 < 2080 and PosY2 < 416 and 1664 < PosX3 < 2080 and PosY3 < 416 and 1664 < PosX4 < 2080 and PosY4 < 416:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1664 < PosX1 < 2080 and PosY1 < 416 and 1664 < PosX2 < 2080 and PosY2 < 416 and 1664 < PosX3 < 2080 and PosY3 < 416 and 1664 < PosX4 < 2080 and PosY4 < 416:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "0" and basename2 == "2080":
                                 print("basey == 0 and basex == 2080")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2080 < PosX1 < 2496 and PosY1 < 416 and 2080 < PosX2 < 2496 and PosY2 < 416 and 2080 < PosX3 < 2496 and PosY3 < 416 and 2080 < PosX4 < 2496 and PosY4 < 416:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2080 < PosX1 < 2496 and PosY1 < 416 and 2080 < PosX2 < 2496 and PosY2 < 416 and 2080 < PosX3 < 2496 and PosY3 < 416 and 2080 < PosX4 < 2496 and PosY4 < 416:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "0" and basename2 == "2496":
                                 print("basey == 0 and basex == 2496")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2496 < PosX1 < 2912 and PosY1 < 416 and 2496 < PosX2 < 2912 and PosY2 < 416 and 2496 < PosX3 < 2912 and PosY3 < 416 and 2496 < PosX4 < 2912 and PosY4 < 416:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2496 < PosX1 < 2912 and PosY1 < 416 and 2496 < PosX2 < 2912 and PosY2 < 416 and 2496 < PosX3 < 2912 and PosY3 < 416 and 2496 < PosX4 < 2912 and PosY4 < 416:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "0" and basename2 == "2912":
                                 print("basey == 0 and basex == 2912")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2912 < PosX1 < 3328 and PosY1 < 416 and 2912 < PosX2 < 3328 and PosY2 < 416 and 2912 < PosX3 < 3328 and PosY3 < 416 and 2912 < PosX4 < 3328 and PosY4 < 416:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2912 < PosX1 < 3328 and PosY1 < 416 and 2912 < PosX2 < 3328 and PosY2 < 416 and 2912 < PosX3 < 3328 and PosY3 < 416 and 2912 < PosX4 < 3328 and PosY4 < 416:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "0" and basename2 == "3328":
                                 print("basey == 0 and basex == 3328")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3328 < PosX1 < 3744 and PosY1 < 416 and 3328 < PosX2 < 3744 and PosY2 < 416 and 3328 < PosX3 < 3744 and PosY3 < 416 and 3328 < PosX4 < 3744 and PosY4 < 416:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3328 < PosX1 < 3744 and PosY1 < 416 and 3328 < PosX2 < 3744 and PosY2 < 416 and 3328 < PosX3 < 3744 and PosY3 < 416 and 3328 < PosX4 < 3744 and PosY4 < 416:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "0" and basename2 == "3744":
                                 print("basey == 0 and basex == 3744")
@@ -126,66 +599,32 @@ for img in glob.glob('docs/Prueba/*.png'):
                                         print(line1)
 
                                         PosX1 = int(float(line1[0]))
-                                        PosX2 = int(float(line1[1]))
-                                        PosY1 = int(float(line1[2]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
                                         PosY2 = int(float(line1[3]))
-                                        PosH1 = int(float(line1[4]))
-                                        PosH2 = int(float(line1[5]))
-                                        PosW1 = int(float(line1[6]))
-                                        PosW2 = int(float(line1[7]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
 
                                         print(PosX1)
-                                        print(PosX2)
                                         print(PosY1)
+                                        print(PosX2)
                                         print(PosY2)
-                                        print(PosH1)
-                                        print(PosH2)
-                                        print(PosW1)
-                                        print(PosW2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
 
-                                        if PosX1 < 416 and 3744 < PosX2 < 4160:
-                                                print("Equal X fuera bucle")
+                                        if 3744 < PosX1 < 4160 and PosY1 < 416 and 3744 < PosX2 < 4160 and PosY2 < 416 and 3744 < PosX3 < 4160 and PosY3 < 416 and 3744 < PosX4 < 4160 and PosY4 < 416:
                                                 print(PosX1)
-                                                print(PosX2)
 
-                                                if file_name in  glob.glob('docs/Prueba_Labels'):
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
-                                                else:
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(line)
-
-                                        if PosY1 < 416 and 3744 < PosY2 < 4160:
-                                                print("Equal Y fuera bucle")
-                                                print(PosY1)
-                                                print(PosY2)
-
-                                                if file_name in  glob.glob('docs/Prueba_Labels'):
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
-                                                else:
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(line)
-
-                                        if PosH1 < 416 and 3744 < PosH2 < 4160:
-                                                print("Equal H fuera bucle")
-                                                print(PosH1)
-                                                print(PosH2)
-
-                                                if file_name in  glob.glob('docs/Prueba_Labels'):
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
-                                                else:
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(line)
-
-                                        if PosW1 < 416 and 3744 < PosW2 < 4160:
-                                                print("Equal W fuera bucle")
-                                                print(PosW1)
-                                                print(PosW2)
-
-                                                if file_name in  glob.glob('docs/Prueba_Labels'):
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
-                                                else:
-                                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(line)
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
 
                                         while line:
                                                 print("Dentro bucle")
                                                 line = f.readline()
+
                                                 if not line:
                                                         continue
 
@@ -193,48 +632,17 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 print(line1)
 
                                                 PosX1 = int(float(line1[0]))
-                                                PosX2 = int(float(line1[1]))
-                                                PosY1 = int(float(line1[2]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
                                                 PosY2 = int(float(line1[3]))
-                                                PosH1 = int(float(line1[4]))
-                                                PosH2 = int(float(line1[5]))
-                                                PosW1 = int(float(line1[6]))
-                                                PosW2 = int(float(line1[7]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
 
-                                                if PosX1 < 416 and 3744 < PosX2 < 4160:
+                                                if 3744 < PosX1 < 4160 and PosY1 < 416 and 3744 < PosX2 < 4160 and PosY2 < 416 and 3744 < PosX3 < 4160 and PosY3 < 416 and 3744 < PosX4 < 4160 and PosY4 < 416:
                                                         print("Equal X")
                                                         print(PosX1)
-                                                        print(PosX2)
-
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
-                                                        else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
-
-                                                if PosY1 < 416 and 3744 < PosY2 < 4160:
-                                                        print("Equal Y")
-                                                        print(PosY1)
-                                                        print(PosY2)
-
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
-                                                        else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
-
-                                                if PosH1 < 416 and 3744 < PosH2 < 4160:
-                                                        print("Equal H")
-                                                        print(PosH1)
-                                                        print(PosH2)
-
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
-                                                        else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
-
-                                                if PosW1 < 416 and 3744 < PosW2 < 4160:
-                                                        print("Equal W")
-                                                        print(PosW1)
-                                                        print(PosW2)
 
                                                         if file_name in glob.glob('docs/Prueba_Labels'):
                                                                 filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
@@ -248,364 +656,5586 @@ for img in glob.glob('docs/Prueba/*.png'):
                         elif basename1 == "416" and basename2 == "0":
                                 print("basey == 416 and basex == 0")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if PosX1 < 416 and 416 < PosY1 < 832 and PosX2 < 416 and 416 < PosY2 < 832 and PosX3 < 416 and 416 < PosY3 < 832 and PosX4 < 416 and 416 < PosY4 < 832:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if PosX1 < 416 and 416 < PosY1 < 832 and PosX2 < 416 and 416 < PosY2 < 832 and PosX3 < 416 and 416 < PosY3 < 832 and PosX4 < 416 and 416 < PosY4 < 832:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "416" and basename2 == "416":
                                 print("basey == 416 and basex == 416")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 416 < PosX1 < 832 and 416 < PosY1 < 832 and 416 < PosX2 < 832 and 416 < PosY2 < 832 and 416 < PosX3 < 832 and 416 < PosY3 < 832 and 416 < PosX4 < 832 and 416 < PosY4 < 832:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 416 < PosX1 < 832 and 416 < PosY1 < 832 and 416 < PosX2 < 832 and 416 < PosY2 < 832 and 416 < PosX3 < 832 and 416 < PosY3 < 832 and 416 < PosX4 < 832 and 416 < PosY4 < 832:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "416" and basename2 == "832":
                                 print("basey == 416 and basex == 832")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 832 < PosX1 < 1248 and 416 < PosY1 < 832 and 832 < PosX2 < 1248 and 416 < PosY2 < 832 and 832 < PosX3 < 1248 and 416 < PosY3 < 832 and 832 < PosX4 < 1248 and 416 < PosY4 < 832:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 832 < PosX1 < 1248 and 416 < PosY1 < 832 and 832 < PosX2 < 1248 and 416 < PosY2 < 832 and 832 < PosX3 < 1248 and 416 < PosY3 < 832 and 832 < PosX4 < 1248 and 416 < PosY4 < 832:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "416" and basename2 == "1248":
                                 print("basey == 416 and basex == 1248")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1248 < PosX1 < 1664 and 416 < PosY1 < 832 and 1248 < PosX2 < 1664 and 416 < PosY2 < 832 and 1248 < PosX3 < 1664 and 416 < PosY3 < 832 and 1248 < PosX4 < 1664 and 416 < PosY4 < 832:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1248 < PosX1 < 1664 and 416 < PosY1 < 832 and 1248 < PosX2 < 1664 and 416 < PosY2 < 832 and 1248 < PosX3 < 1664 and 416 < PosY3 < 832 and 1248 < PosX4 < 1664 and 416 < PosY4 < 832:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "416" and basename2 == "1664":
                                 print("basey == 416 and basex == 1664")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1664 < PosX1 < 2080 and 416 < PosY1 < 832 and 1664 < PosX2 < 2080 and 416 < PosY2 < 832 and 1664 < PosX3 < 2080 and 416 < PosY3 < 832 and 1664 < PosX4 < 2080 and 416 < PosY4 < 832:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1664 < PosX1 < 2080 and 416 < PosY1 < 832 and 1664 < PosX2 < 2080 and 416 < PosY2 < 832 and 1664 < PosX3 < 2080 and 416 < PosY3 < 832 and 1664 < PosX4 < 2080 and 416 < PosY4 < 832:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "416" and basename2 == "2080":
                                 print("basey == 416 and basex == 2080")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2080 < PosX1 < 2496 and 416 < PosY1 < 832 and 2080 < PosX2 < 2496 and 416 < PosY2 < 832 and 2080 < PosX3 < 2496 and 416 < PosY3 < 832 and 2080 < PosX4 < 2496 and 416 < PosY4 < 832:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2080 < PosX1 < 2496 and 416 < PosY1 < 832 and 2080 < PosX2 < 2496 and 416 < PosY2 < 832 and 2080 < PosX3 < 2496 and 416 < PosY3 < 832 and 2080 < PosX4 < 2496 and 416 < PosY4 < 832:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "416" and basename2 == "2496":
                                 print("basey == 416 and basex == 2496")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2496 < PosX1 < 2912 and 416 < PosY1 < 832 and 2496 < PosX2 < 2912 and 416 < PosY2 < 832 and 2496 < PosX3 < 2912 and 416 < PosY3 < 832 and 2496 < PosX4 < 2912 and 416 < PosY4 < 832:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2496 < PosX1 < 2912 and 416 < PosY1 < 832 and 2496 < PosX2 < 2912 and 416 < PosY2 < 832 and 2496 < PosX3 < 2912 and 416 < PosY3 < 832 and 2496 < PosX4 < 2912 and 416 < PosY4 < 832:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "416" and basename2 == "2912":
                                 print("basey == 416 and basex == 2912")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2912 < PosX1 < 3328 and 416 < PosY1 < 832 and 2912 < PosX2 < 3328 and 416 < PosY2 < 832 and 2912 < PosX3 < 3328 and 416 < PosY3 < 832 and 2912 < PosX4 < 3328 and 416 < PosY4 < 832:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2912 < PosX1 < 3328 and 416 < PosY1 < 832 and 2912 < PosX2 < 3328 and 416 < PosY2 < 832 and 2912 < PosX3 < 3328 and 416 < PosY3 < 832 and 2912 < PosX4 < 3328 and 416 < PosY4 < 832:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "416" and basename2 == "3328":
                                 print("basey == 416 and basex == 3328")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3328 < PosX1 < 3744 and 416 < PosY1 < 832 and 3328 < PosX2 < 3744 and 416 < PosY2 < 832 and 3328 < PosX3 < 3744 and 416 < PosY3 < 832 and 3328 < PosX4 < 3744 and 416 < PosY4 < 832:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3328 < PosX1 < 3744 and 416 < PosY1 < 832 and 3328 < PosX2 < 3744 and 416 < PosY2 < 832 and 3328 < PosX3 < 3744 and 416 < PosY3 < 832 and 3328 < PosX4 < 3744 and 416 < PosY4 < 832:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "416" and basename2 == "3744":
                                 print("basey == 416 and basex == 3744")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3744 < PosX1 < 4160 and 416 < PosY1 < 832 and 3744 < PosX2 < 4160 and 416 < PosY2 < 832 and 3744 < PosX3 < 4160 and 416 < PosY3 < 832 and 3744 < PosX4 < 4160 and 416 < PosY4 < 832:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3744 < PosX1 < 4160 and 416 < PosY1 < 832 and 3744 < PosX2 < 4160 and 416 < PosY2 < 832 and 3744 < PosX3 < 4160 and 416 < PosY3 < 832 and 3744 < PosX4 < 4160 and 416 < PosY4 < 832:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         # Y = 832
 
                         elif basename1 == "832" and basename2 == "0":
                                 print("basey == 832 and basex == 0")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if PosX1 < 416 and 832 < PosY1 < 1248 and PosX2 < 416 and 832 < PosY2 < 1248 and PosX3 < 416 and 832 < PosY3 < 1248 and PosX4 < 416 and 832 < PosY4 < 1248:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if PosX1 < 416 and 832 < PosY1 < 1248 and PosX2 < 416 and 832 < PosY2 < 1248 and PosX3 < 416 and 832 < PosY3 < 1248 and PosX4 < 416 and 832 < PosY4 < 1248:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "832" and basename2 == "416":
                                 print("basey == 832 and basex == 416")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 416 < PosX1 < 832 and 832 < PosY1 < 1248 and 416 < PosX2 < 832 and 832 < PosY2 < 1248 and 416 < PosX3 < 832 and 832 < PosY3 < 1248 and 416 < PosX4 < 832 and 832 < PosY4 < 1248:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 416 < PosX1 < 832 and 832 < PosY1 < 1248 and 416 < PosX2 < 832 and 832 < PosY2 < 1248 and 416 < PosX3 < 832 and 832 < PosY3 < 1248 and 416 < PosX4 < 832 and 832 < PosY4 < 1248:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "832" and basename2 == "832":
                                 print("basey == 832 and basex == 832")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 832 < PosX1 < 1248 and 832 < PosY1 < 1248 and 832 < PosX2 < 1248 and 832 < PosY2 < 1248 and 832 < PosX3 < 1248 and 832 < PosY3 < 1248 and 832 < PosX4 < 1248 and 832 < PosY4 < 1248:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 832 < PosX1 < 1248 and 832 < PosY1 < 1248 and 832 < PosX2 < 1248 and 832 < PosY2 < 1248 and 832 < PosX3 < 1248 and 832 < PosY3 < 1248 and 832 < PosX4 < 1248 and 832 < PosY4 < 1248:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "832" and basename2 == "1248":
                                 print("basey == 832 and basex == 1248")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1248 < PosX1 < 1664 and 832 < PosY1 < 1248 and 1248 < PosX2 < 1664 and 832 < PosY2 < 1248 and 1248 < PosX3 < 1664 and 832 < PosY3 < 1248 and 1248 < PosX4 < 1664 and 832 < PosY4 < 1248:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1248 < PosX1 < 1664 and 832 < PosY1 < 1248 and 1248 < PosX2 < 1664 and 832 < PosY2 < 1248 and 1248 < PosX3 < 1664 and 832 < PosY3 < 1248 and 1248 < PosX4 < 1664 and 832 < PosY4 < 1248:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "832" and basename2 == "1664":
                                 print("basey == 832 and basex == 1664")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1664 < PosX1 < 2080 and 832 < PosY1 < 1248 and 1664 < PosX2 < 2080 and 832 < PosY2 < 1248 and 1664 < PosX3 < 2080 and 832 < PosY3 < 1248 and 1664 < PosX4 < 2080 and 832 < PosY4 < 1248:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1664 < PosX1 < 2080 and 832 < PosY1 < 1248 and 1664 < PosX2 < 2080 and 832 < PosY2 < 1248 and 1664 < PosX3 < 2080 and 832 < PosY3 < 1248 and 1664 < PosX4 < 2080 and 832 < PosY4 < 1248:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "832" and basename2 == "2080":
                                 print("basey == 832 and basex == 2080")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2080 < PosX1 < 2496 and 832 < PosY1 < 1248 and 2080 < PosX2 < 2496 and 832 < PosY2 < 1248 and 2080 < PosX3 < 2496 and 832 < PosY3 < 1248 and 2080 < PosX4 < 2496 and 832 < PosY4 < 1248:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2080 < PosX1 < 2496 and 832 < PosY1 < 1248 and 2080 < PosX2 < 2496 and 832 < PosY2 < 1248 and 2080 < PosX3 < 2496 and 832 < PosY3 < 1248 and 2080 < PosX4 < 2496 and 832 < PosY4 < 1248:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "832" and basename2 == "2496":
                                 print("basey == 832 and basex == 2496")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2496 < PosX1 < 2912 and 832 < PosY1 < 1248 and 2496 < PosX2 < 2912 and 832 < PosY2 < 1248 and 2496 < PosX3 < 2912 and 832 < PosY3 < 1248 and 2496 < PosX4 < 2912 and 832 < PosY4 < 1248:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2496 < PosX1 < 2912 and 832 < PosY1 < 1248 and 2496 < PosX2 < 2912 and 832 < PosY2 < 1248 and 2496 < PosX3 < 2912 and 832 < PosY3 < 1248 and 2496 < PosX4 < 2912 and 832 < PosY4 < 1248:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "832" and basename2 == "2912":
                                 print("basey == 832 and basex == 2912")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2912 < PosX1 < 3328 and 832 < PosY1 < 1248 and 2912 < PosX2 < 3328 and 832 < PosY2 < 1248 and 2912 < PosX3 < 3328 and 832 < PosY3 < 1248 and 2912 < PosX4 < 3328 and 832 < PosY4 < 1248:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2912 < PosX1 < 3328 and 832 < PosY1 < 1248 and 2912 < PosX2 < 3328 and 832 < PosY2 < 1248 and 2912 < PosX3 < 3328 and 832 < PosY3 < 1248 and 2912 < PosX4 < 3328 and 832 < PosY4 < 1248:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "832" and basename2 == "3328":
                                 print("basey == 832 and basex == 3328")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3328 < PosX1 < 3744 and 832 < PosY1 < 1248 and 3328 < PosX2 < 3744 and 832 < PosY2 < 1248 and 3328 < PosX3 < 3744 and 832 < PosY3 < 1248 and 3328 < PosX4 < 3744 and 832 < PosY4 < 1248:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3328 < PosX1 < 3744 and 832 < PosY1 < 1248 and 3328 < PosX2 < 3744 and 832 < PosY2 < 1248 and 3328 < PosX3 < 3744 and 832 < PosY3 < 1248 and 3328 < PosX4 < 3744 and 832 < PosY4 < 1248:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "832" and basename2 == "3744":
                                 print("basey == 832 and basex == 3744")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3744 < PosX1 < 4160 and 832 < PosY1 < 1248 and 3744 < PosX2 < 4160 and 832 < PosY2 < 1248 and 3744 < PosX3 < 4160 and 832 < PosY3 < 1248 and 3744 < PosX4 < 4160 and 832 < PosY4 < 1248:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3744 < PosX1 < 4160 and 832 < PosY1 < 1248 and 3744 < PosX2 < 4160 and 832 < PosY2 < 1248 and 3744 < PosX3 < 4160 and 832 < PosY3 < 1248 and 3744 < PosX4 < 4160 and 832 < PosY4 < 1248:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         # Y = 1248
 
                         elif basename1 == "1248" and basename2 == "0":
                                 print("basey == 1248 and basex == 0")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if PosX1 < 416 and 1248 < PosY1 < 1664 and PosX2 < 416 and 1248 < PosY2 < 1664 and PosX3 < 416 and 1248 < PosY3 < 1664 and PosX4 < 416 and 1248 < PosY4 < 1664:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if PosX1 < 416 and 1248 < PosY1 < 1664 and PosX2 < 416 and 1248 < PosY2 < 1664 and PosX3 < 416 and 1248 < PosY3 < 1664 and PosX4 < 416 and 1248 < PosY4 < 1664:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "1248" and basename2 == "416":
                                 print("basey == 1248 and basex == 416")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 416 < PosX1 < 832 and 1248 < PosY1 < 1664 and 416 < PosX2 < 832 and 1248 < PosY2 < 1664 and 416 < PosX3 < 832 and 1248 < PosY3 < 1664 and 416 < PosX4 < 832 and 1248 < PosY4 < 1664:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 416 < PosX1 < 832 and 1248 < PosY1 < 1664 and 416 < PosX2 < 832 and 1248 < PosY2 < 1664 and 416 < PosX3 < 832 and 1248 < PosY3 < 1664 and 416 < PosX4 < 832 and 1248 < PosY4 < 1664:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "1248" and basename2 == "832":
                                 print("basey == 1248 and basex == 832")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 832 < PosX1 < 1248 and 1248 < PosY1 < 1664 and 832 < PosX2 < 1248 and 1248 < PosY2 < 1664 and 832 < PosX3 < 1248 and 1248 < PosY3 < 1664 and 832 < PosX4 < 1248 and 1248 < PosY4 < 1664:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 832 < PosX1 < 1248 and 1248 < PosY1 < 1664 and 832 < PosX2 < 1248 and 1248 < PosY2 < 1664 and 832 < PosX3 < 1248 and 1248 < PosY3 < 1664 and 832 < PosX4 < 1248 and 1248 < PosY4 < 1664:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "1248" and basename2 == "1248":
                                 print("basey == 1248 and basex == 1248")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1248 < PosX1 < 1664 and 1248 < PosY1 < 1664 and 1248 < PosX2 < 1664 and 1248 < PosY2 < 1664 and 1248 < PosX3 < 1664 and 1248 < PosY3 < 1664 and 1248 < PosX4 < 1664 and 1248 < PosY4 < 1664:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1248 < PosX1 < 1664 and 1248 < PosY1 < 1664 and 1248 < PosX2 < 1664 and 1248 < PosY2 < 1664 and 1248 < PosX3 < 1664 and 1248 < PosY3 < 1664 and 1248 < PosX4 < 1664 and 1248 < PosY4 < 1664:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "1248" and basename2 == "1664":
                                 print("basey == 1248 and basex == 1664")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1664 < PosX1 < 2080 and 1248 < PosY1 < 1664 and 1664 < PosX2 < 2080 and 1248 < PosY2 < 1664 and 1664 < PosX3 < 2080 and 1248 < PosY3 < 1664 and 1664 < PosX4 < 2080 and 1248 < PosY4 < 1664:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1664 < PosX1 < 2080 and 1248 < PosY1 < 1664 and 1664 < PosX2 < 2080 and 1248 < PosY2 < 1664 and 1664 < PosX3 < 2080 and 1248 < PosY3 < 1664 and 1664 < PosX4 < 2080 and 1248 < PosY4 < 1664:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "1248" and basename2 == "2080":
                                 print("basey == 1248 and basex == 2080")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2080 < PosX1 < 2496 and 1248 < PosY1 < 1664 and 2080 < PosX2 < 2496 and 1248 < PosY2 < 1664 and 2080 < PosX3 < 2496 and 1248 < PosY3 < 1664 and 2080 < PosX4 < 2496 and 1248 < PosY4 < 1664:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2080 < PosX1 < 2496 and 1248 < PosY1 < 1664 and 2080 < PosX2 < 2496 and 1248 < PosY2 < 1664 and 2080 < PosX3 < 2496 and 1248 < PosY3 < 1664 and 2080 < PosX4 < 2496 and 1248 < PosY4 < 1664:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "1248" and basename2 == "2496":
                                 print("basey == 1248 and basex == 2496")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2496 < PosX1 < 2912 and 1248 < PosY1 < 1664 and 2496 < PosX2 < 2912 and 1248 < PosY2 < 1664 and 2496 < PosX3 < 2912 and 1248 < PosY3 < 1664 and 2496 < PosX4 < 2912 and 1248 < PosY4 < 1664:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2496 < PosX1 < 2912 and 1248 < PosY1 < 1664 and 2496 < PosX2 < 2912 and 1248 < PosY2 < 1664 and 2496 < PosX3 < 2912 and 1248 < PosY3 < 1664 and 2496 < PosX4 < 2912 and 1248 < PosY4 < 1664:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "1248" and basename2 == "2912":
                                 print("basey == 1248 and basex == 2912")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2912 < PosX1 < 3328 and 1248 < PosY1 < 1664 and 2912 < PosX2 < 3328 and 1248 < PosY2 < 1664 and 2912 < PosX3 < 3328 and 1248 < PosY3 < 1664 and 2912 < PosX4 < 3328 and 1248 < PosY4 < 1664:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2912 < PosX1 < 3328 and 1248 < PosY1 < 1664 and 2912 < PosX2 < 3328 and 1248 < PosY2 < 1664 and 2912 < PosX3 < 3328 and 1248 < PosY3 < 1664 and 2912 < PosX4 < 3328 and 1248 < PosY4 < 1664:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "1248" and basename2 == "3328":
                                 print("basey == 1248 and basex == 3328")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3328 < PosX1 < 3744 and 1248 < PosY1 < 1664 and 3328 < PosX2 < 3744 and 1248 < PosY2 < 1664 and 3328 < PosX3 < 3744 and 1248 < PosY3 < 1664 and 3328 < PosX4 < 3744 and 1248 < PosY4 < 1664:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3328 < PosX1 < 3744 and 1248 < PosY1 < 1664 and 3328 < PosX2 < 3744 and 1248 < PosY2 < 1664 and 3328 < PosX3 < 3744 and 1248 < PosY3 < 1664 and 3328 < PosX4 < 3744 and 1248 < PosY4 < 1664:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "1248" and basename2 == "3744":
                                 print("basey == 1248 and basex == 3744")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3744 < PosX1 < 4160 and 1248 < PosY1 < 1664 and 3744 < PosX2 < 4160 and 1248 < PosY2 < 1664 and 3744 < PosX3 < 4160 and 1248 < PosY3 < 1664 and 3744 < PosX4 < 4160 and 1248 < PosY4 < 1664:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3744 < PosX1 < 4160 and 1248 < PosY1 < 1664 and 3744 < PosX2 < 4160 and 1248 < PosY2 < 1664 and 3744 < PosX3 < 4160 and 1248 < PosY3 < 1664 and 3744 < PosX4 < 4160 and 1248 < PosY4 < 1664:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         # Y = 1664
 
                         elif basename1 == "1664" and basename2 == "0":
                                 print("basey == 1664 and basex == 0")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if PosX1 < 416 and 1664 < PosY1 < 2080 and PosX2 < 416 and 1664 < PosY2 < 2080 and PosX3 < 416 and 1664 < PosY3 < 2080 and PosX4 < 416 and 1664 < PosY4 < 2080:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if PosX1 < 416 and 1664 < PosY1 < 2080 and PosX2 < 416 and 1664 < PosY2 < 2080 and PosX3 < 416 and 1664 < PosY3 < 2080 and PosX4 < 416 and 1664 < PosY4 < 2080:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "1664" and basename2 == "416":
                                 print("basey == 1664 and basex == 416")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 416 < PosX1 < 832 and 1664 < PosY1 < 2080 and 416 < PosX2 < 832 and 1664 < PosY2 < 2080 and 416 < PosX3 < 832 and 1664 < PosY3 < 2080 and 416 < PosX4 < 832 and 1664 < PosY4 < 2080:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 416 < PosX1 < 832 and 1664 < PosY1 < 2080 and 416 < PosX2 < 832 and 1664 < PosY2 < 2080 and 416 < PosX3 < 832 and 1664 < PosY3 < 2080 and 416 < PosX4 < 832 and 1664 < PosY4 < 2080:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "1664" and basename2 == "832":
                                 print("basey == 1664 and basex == 832")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 832 < PosX1 < 1248 and 1664 < PosY1 < 2080 and 832 < PosX2 < 1248 and 1664 < PosY2 < 2080 and 832 < PosX3 < 1248 and 1664 < PosY3 < 2080 and 832 < PosX4 < 1248 and 1664 < PosY4 < 2080:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 832 < PosX1 < 1248 and 1664 < PosY1 < 2080 and 832 < PosX2 < 1248 and 1664 < PosY2 < 2080 and 832 < PosX3 < 1248 and 1664 < PosY3 < 2080 and 832 < PosX4 < 1248 and 1664 < PosY4 < 2080:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "1664" and basename2 == "1248":
                                 print("basey == 1664 and basex == 1248")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1248 < PosX1 < 1664 and 1664 < PosY1 < 2080 and 1248 < PosX2 < 1664 and 1664 < PosY2 < 2080 and 1248 < PosX3 < 1664 and 1664 < PosY3 < 2080 and 1248 < PosX4 < 1664 and 1664 < PosY4 < 2080:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1248 < PosX1 < 1664 and 1664 < PosY1 < 2080 and 1248 < PosX2 < 1664 and 1664 < PosY2 < 2080 and 1248 < PosX3 < 1664 and 1664 < PosY3 < 2080 and 1248 < PosX4 < 1664 and 1664 < PosY4 < 2080:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "1664" and basename2 == "1664":
                                 print("basey == 1664 and basex == 1664")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1664 < PosX1 < 2080 and 1664 < PosY1 < 2080 and 1664 < PosX2 < 2080 and 1664 < PosY2 < 2080 and 1664 < PosX3 < 2080 and 1664 < PosY3 < 2080 and 1664 < PosX4 < 2080 and 1664 < PosY4 < 2080:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1664 < PosX1 < 2080 and 1664 < PosY1 < 2080 and 1664 < PosX2 < 2080 and 1664 < PosY2 < 2080 and 1664 < PosX3 < 2080 and 1664 < PosY3 < 2080 and 1664 < PosX4 < 2080 and 1664 < PosY4 < 2080:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "1664" and basename2 == "2080":
                                 print("basey == 1664 and basex == 2080")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2080 < PosX1 < 2496 and 1664 < PosY1 < 2080 and 2080 < PosX2 < 2496 and 1664 < PosY2 < 2080 and 2080 < PosX3 < 2496 and 1664 < PosY3 < 2080 and 2080 < PosX4 < 2496 and 1664 < PosY4 < 2080:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2080 < PosX1 < 2496 and 1664 < PosY1 < 2080 and 2080 < PosX2 < 2496 and 1664 < PosY2 < 2080 and 2080 < PosX3 < 2496 and 1664 < PosY3 < 2080 and 2080 < PosX4 < 2496 and 1664 < PosY4 < 2080:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "1664" and basename2 == "2496":
                                 print("basey == 1664 and basex == 2496")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2496 < PosX1 < 2912 and 1664 < PosY1 < 2080 and 2496 < PosX2 < 2912 and 1664 < PosY2 < 2080 and 2496 < PosX3 < 2912 and 1664 < PosY3 < 2080 and 2496 < PosX4 < 2912 and 1664 < PosY4 < 2080:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2496 < PosX1 < 2912 and 1664 < PosY1 < 2080 and 2496 < PosX2 < 2912 and 1664 < PosY2 < 2080 and 2496 < PosX3 < 2912 and 1664 < PosY3 < 2080 and 2496 < PosX4 < 2912 and 1664 < PosY4 < 2080:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "1664" and basename2 == "2912":
                                 print("basey == 1664 and basex == 2912")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2912 < PosX1 < 3328 and 1664 < PosY1 < 2080 and 2912 < PosX2 < 3328 and 1664 < PosY2 < 2080 and 2912 < PosX3 < 3328 and 1664 < PosY3 < 2080 and 2912 < PosX4 < 3328 and 1664 < PosY4 < 2080:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2912 < PosX1 < 3328 and 1664 < PosY1 < 2080 and 2912 < PosX2 < 3328 and 1664 < PosY2 < 2080 and 2912 < PosX3 < 3328 and 1664 < PosY3 < 2080 and 2912 < PosX4 < 3328 and 1664 < PosY4 < 2080:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "1664" and basename2 == "3328":
                                 print("basey == 1664 and basex == 3328")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3328 < PosX1 < 3744 and 1664 < PosY1 < 2080 and 3328 < PosX2 < 3744 and 1664 < PosY2 < 2080 and 3328 < PosX3 < 3744 and 1664 < PosY3 < 2080 and 3328 < PosX4 < 3744 and 1664 < PosY4 < 2080:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3328 < PosX1 < 3744 and 1664 < PosY1 < 2080 and 3328 < PosX2 < 3744 and 1664 < PosY2 < 2080 and 3328 < PosX3 < 3744 and 1664 < PosY3 < 2080 and 3328 < PosX4 < 3744 and 1664 < PosY4 < 2080:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "1664" and basename2 == "3744":
                                 print("basey == 1664 and basex == 3744")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3744 < PosX1 < 4160 and 1664 < PosY1 < 2080 and 3744 < PosX2 < 4160 and 1664 < PosY2 < 2080 and 3744 < PosX3 < 4160 and 1664 < PosY3 < 2080 and 3744 < PosX4 < 4160 and 1664 < PosY4 < 2080:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3744 < PosX1 < 4160 and 1664 < PosY1 < 2080 and 3744 < PosX2 < 4160 and 1664 < PosY2 < 2080 and 3744 < PosX3 < 4160 and 1664 < PosY3 < 2080 and 3744 < PosX4 < 4160 and 1664 < PosY4 < 2080:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         # Y = 2080
 
                         elif basename1 == "2080" and basename2 == "0":
                                 print("basey == 2080 and basex == 0")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if PosX1 < 416 and 2080 < PosY1 < 2496 and PosX2 < 416 and 2080 < PosY2 < 2496 and PosX3 < 416 and 2080 < PosY3 < 2496 and PosX4 < 416 and 2080 < PosY4 < 2496:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if PosX1 < 416 and 2080 < PosY1 < 2496 and PosX2 < 416 and 2080 < PosY2 < 2496 and PosX3 < 416 and 2080 < PosY3 < 2496 and PosX4 < 416 and 2080 < PosY4 < 2496:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "2080" and basename2 == "416":
                                 print("basey == 2080 and basex == 416")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 416 < PosX1 < 832 and 2080 < PosY1 < 2496 and 416 < PosX2 < 832 and 2080 < PosY2 < 2496 and 416 < PosX3 < 832 and 2080 < PosY3 < 2496 and 416 < PosX4 < 832 and 2080 < PosY4 < 2496:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 416 < PosX1 < 832 and 2080 < PosY1 < 2496 and 416 < PosX2 < 832 and 2080 < PosY2 < 2496 and 416 < PosX3 < 832 and 2080 < PosY3 < 2496 and 416 < PosX4 < 832 and 2080 < PosY4 < 2496:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "2080" and basename2 == "832":
                                 print("basey == 2080 and basex == 832")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 832 < PosX1 < 1248 and 2080 < PosY1 < 2496 and 832 < PosX2 < 1248 and 2080 < PosY2 < 2496 and 832 < PosX3 < 1248 and 2080 < PosY3 < 2496 and 832 < PosX4 < 1248 and 2080 < PosY4 < 2496:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 832 < PosX1 < 1248 and 2080 < PosY1 < 2496 and 832 < PosX2 < 1248 and 2080 < PosY2 < 2496 and 832 < PosX3 < 1248 and 2080 < PosY3 < 2496 and 832 < PosX4 < 1248 and 2080 < PosY4 < 2496:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "2080" and basename2 == "1248":
                                 print("basey == 2080 and basex == 1248")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1248 < PosX1 < 1664 and 2080 < PosY1 < 2496 and 1248 < PosX2 < 1664 and 2080 < PosY2 < 2496 and 1248 < PosX3 < 1664 and 2080 < PosY3 < 2496 and 1248 < PosX4 < 1664 and 2080 < PosY4 < 2496:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1248 < PosX1 < 1664 and 2080 < PosY1 < 2496 and 1248 < PosX2 < 1664 and 2080 < PosY2 < 2496 and 1248 < PosX3 < 1664 and 2080 < PosY3 < 2496 and 1248 < PosX4 < 1664 and 2080 < PosY4 < 2496:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "2080" and basename2 == "1664":
                                 print("basey == 2080 and basex == 1664")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1664 < PosX1 < 2080 and 2080 < PosY1 < 2496 and 1664 < PosX2 < 2080 and 2080 < PosY2 < 2496 and 1664 < PosX3 < 2080 and 2080 < PosY3 < 2496 and 1664 < PosX4 < 2080 and 2080 < PosY4 < 2496:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1664 < PosX1 < 2080 and 2080 < PosY1 < 2496 and 1664 < PosX2 < 2080 and 2080 < PosY2 < 2496 and 1664 < PosX3 < 2080 and 2080 < PosY3 < 2496 and 1664 < PosX4 < 2080 and 2080 < PosY4 < 2496:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "2080" and basename2 == "2080":
                                 print("basey == 2080 and basex == 2080")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2080 < PosX1 < 2496 and 2080 < PosY1 < 2496 and 2080 < PosX2 < 2496 and 2080 < PosY2 < 2496 and 2080 < PosX3 < 2496 and 2080 < PosY3 < 2496 and 2080 < PosX4 < 2496 and 2080 < PosY4 < 2496:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2080 < PosX1 < 2496 and 2080 < PosY1 < 2496 and 2080 < PosX2 < 2496 and 2080 < PosY2 < 2496 and 2080 < PosX3 < 2496 and 2080 < PosY3 < 2496 and 2080 < PosX4 < 2496 and 2080 < PosY4 < 2496:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "2080" and basename2 == "2496":
                                 print("basey == 2080 and basex == 2496")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2496 < PosX1 < 2912 and 2080 < PosY1 < 2496 and 2496 < PosX2 < 2912 and 2080 < PosY2 < 2496 and 2496 < PosX3 < 2912 and 2080 < PosY3 < 2496 and 2496 < PosX4 < 2912 and 2080 < PosY4 < 2496:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2496 < PosX1 < 2912 and 2080 < PosY1 < 2496 and 2496 < PosX2 < 2912 and 2080 < PosY2 < 2496 and 2496 < PosX3 < 2912 and 2080 < PosY3 < 2496 and 2496 < PosX4 < 2912 and 2080 < PosY4 < 2496:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "2080" and basename2 == "2912":
                                 print("basey == 2080 and basex == 2912")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2912 < PosX1 < 3328 and 2080 < PosY1 < 2496 and 2912 < PosX2 < 3328 and 2080 < PosY2 < 2496 and 2912 < PosX3 < 3328 and 2080 < PosY3 < 2496 and 2912 < PosX4 < 3328 and 2080 < PosY4 < 2496:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2912 < PosX1 < 3328 and 2080 < PosY1 < 2496 and 2912 < PosX2 < 3328 and 2080 < PosY2 < 2496 and 2912 < PosX3 < 3328 and 2080 < PosY3 < 2496 and 2912 < PosX4 < 3328 and 2080 < PosY4 < 2496:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "2080" and basename2 == "3328":
                                 print("basey == 2080 and basex == 3328")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3328 < PosX1 < 3744 and 2080 < PosY1 < 2496 and 3328 < PosX2 < 3744 and 2080 < PosY2 < 2496 and 3328 < PosX3 < 3744 and 2080 < PosY3 < 2496 and 3328 < PosX4 < 3744 and 2080 < PosY4 < 2496:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3328 < PosX1 < 3744 and 2080 < PosY1 < 2496 and 3328 < PosX2 < 3744 and 2080 < PosY2 < 2496 and 3328 < PosX3 < 3744 and 2080 < PosY3 < 2496 and 3328 < PosX4 < 3744 and 2080 < PosY4 < 2496:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "2080" and basename2 == "3744":
                                 print("basey == 2080 and basex == 3744")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3744 < PosX1 < 4160 and 2080 < PosY1 < 2496 and 3744 < PosX2 < 4160 and 2080 < PosY2 < 2496 and 3744 < PosX3 < 4160 and 2080 < PosY3 < 2496 and 3744 < PosX4 < 4160 and 2080 < PosY4 < 2496:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3744 < PosX1 < 4160 and 2080 < PosY1 < 2496 and 3744 < PosX2 < 4160 and 2080 < PosY2 < 2496 and 3744 < PosX3 < 4160 and 2080 < PosY3 < 2496 and 3744 < PosX4 < 4160 and 2080 < PosY4 < 2496:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         # Y = 2496
 
                         elif basename1 == "2496" and basename2 == "0":
                                 print("basey == 2496 and basex == 0")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if PosX1 < 416 and 2496 < PosY1 < 2912 and PosX2 < 416 and 2496 < PosY2 < 2912 and PosX3 < 416 and 2496 < PosY3 < 2912 and PosX4 < 416 and 2496 < PosY4 < 2912:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if PosX1 < 416 and 2496 < PosY1 < 2912 and PosX2 < 416 and 2496 < PosY2 < 2912 and PosX3 < 416 and 2496 < PosY3 < 2912 and PosX4 < 416 and 2496 < PosY4 < 2912:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "2496" and basename2 == "416":
                                 print("basey == 2496 and basex == 416")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 416 < PosX1 < 832 and 2496 < PosY1 < 2912 and 416 < PosX2 < 832 and 2496 < PosY2 < 2912 and 416 < PosX3 < 832 and 2496 < PosY3 < 2912 and 416 < PosX4 < 832 and 2496 < PosY4 < 2912:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 416 < PosX1 < 832 and 2496 < PosY1 < 2912 and 416 < PosX2 < 832 and 2496 < PosY2 < 2912 and 416 < PosX3 < 832 and 2496 < PosY3 < 2912 and 416 < PosX4 < 832 and 2496 < PosY4 < 2912:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "2496" and basename2 == "832":
                                 print("basey == 2496 and basex == 832")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 832 < PosX1 < 1248 and 2496 < PosY1 < 2912 and 832 < PosX2 < 1248 and 2496 < PosY2 < 2912 and 832 < PosX3 < 1248 and 2496 < PosY3 < 2912 and 832 < PosX4 < 1248 and 2496 < PosY4 < 2912:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 832 < PosX1 < 1248 and 2496 < PosY1 < 2912 and 832 < PosX2 < 1248 and 2496 < PosY2 < 2912 and 832 < PosX3 < 1248 and 2496 < PosY3 < 2912 and 832 < PosX4 < 1248 and 2496 < PosY4 < 2912:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "2496" and basename2 == "1248":
                                 print("basey == 2496 and basex == 1248")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1248 < PosX1 < 1664 and 2496 < PosY1 < 2912 and 1248 < PosX2 < 1664 and 2496 < PosY2 < 2912 and 1248 < PosX3 < 1664 and 2496 < PosY3 < 2912 and 1248 < PosX4 < 1664 and 2496 < PosY4 < 2912:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1248 < PosX1 < 1664 and 2496 < PosY1 < 2912 and 1248 < PosX2 < 1664 and 2496 < PosY2 < 2912 and 1248 < PosX3 < 1664 and 2496 < PosY3 < 2912 and 1248 < PosX4 < 1664 and 2496 < PosY4 < 2912:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "2496" and basename2 == "1664":
                                 print("basey == 2496 and basex == 1664")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1664 < PosX1 < 2080 and 2496 < PosY1 < 2912 and 1664 < PosX2 < 2080 and 2496 < PosY2 < 2912 and 1664 < PosX3 < 2080 and 2496 < PosY3 < 2912 and 1664 < PosX4 < 2080 and 2496 < PosY4 < 2912:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1664 < PosX1 < 2080 and 2496 < PosY1 < 2912 and 1664 < PosX2 < 2080 and 2496 < PosY2 < 2912 and 1664 < PosX3 < 2080 and 2496 < PosY3 < 2912 and 1664 < PosX4 < 2080 and 2496 < PosY4 < 2912:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "2496" and basename2 == "2080":
                                 print("basey == 2496 and basex == 2080")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2080 < PosX1 < 2496 and 2496 < PosY1 < 2912 and 2080 < PosX2 < 2496 and 2496 < PosY2 < 2912 and 2080 < PosX3 < 2496 and 2496 < PosY3 < 2912 and 2080 < PosX4 < 2496 and 2496 < PosY4 < 2912:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2080 < PosX1 < 2496 and 2496 < PosY1 < 2912 and 2080 < PosX2 < 2496 and 2496 < PosY2 < 2912 and 2080 < PosX3 < 2496 and 2496 < PosY3 < 2912 and 2080 < PosX4 < 2496 and 2496 < PosY4 < 2912:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "2496" and basename2 == "2496":
                                 print("basey == 2496 and basex == 2496")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2496 < PosX1 < 2912 and 2496 < PosY1 < 2912 and 2496 < PosX2 < 2912 and 2496 < PosY2 < 2912 and 2496 < PosX3 < 2912 and 2496 < PosY3 < 2912 and 2496 < PosX4 < 2912 and 2496 < PosY4 < 2912:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2496 < PosX1 < 2912 and 2496 < PosY1 < 2912 and 2496 < PosX2 < 2912 and 2496 < PosY2 < 2912 and 2496 < PosX3 < 2912 and 2496 < PosY3 < 2912 and 2496 < PosX4 < 2912 and 2496 < PosY4 < 2912:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "2496" and basename2 == "2912":
                                 print("basey == 2496 and basex == 2912")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2912 < PosX1 < 3328 and 2496 < PosY1 < 2912 and 2912 < PosX2 < 3328 and 2496 < PosY2 < 2912 and 2912 < PosX3 < 3328 and 2496 < PosY3 < 2912 and 2912 < PosX4 < 3328 and 2496 < PosY4 < 2912:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2912 < PosX1 < 3328 and 2496 < PosY1 < 2912 and 2912 < PosX2 < 3328 and 2496 < PosY2 < 2912 and 2912 < PosX3 < 3328 and 2496 < PosY3 < 2912 and 2912 < PosX4 < 3328 and 2496 < PosY4 < 2912:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "2496" and basename2 == "3328":
                                 print("basey == 2496 and basex == 3328")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3328 < PosX1 < 3744 and 2496 < PosY1 < 2912 and 3328 < PosX2 < 3744 and 2496 < PosY2 < 2912 and 3328 < PosX3 < 3744 and 2496 < PosY3 < 2912 and 3328 < PosX4 < 3744 and 2496 < PosY4 < 2912:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3328 < PosX1 < 3744 and 2496 < PosY1 < 2912 and 3328 < PosX2 < 3744 and 2496 < PosY2 < 2912 and 3328 < PosX3 < 3744 and 2496 < PosY3 < 2912 and 3328 < PosX4 < 3744 and 2496 < PosY4 < 2912:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "2496" and basename2 == "3744":
                                 print("basey == 2496 and basex == 3744")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3744 < PosX1 < 4160 and 2496 < PosY1 < 2912 and 3744 < PosX2 < 4160 and 2496 < PosY2 < 2912 and 3744 < PosX3 < 4160 and 2496 < PosY3 < 2912 and 3744 < PosX4 < 4160 and 2496 < PosY4 < 2912:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3744 < PosX1 < 4160 and 2496 < PosY1 < 2912 and 3744 < PosX2 < 4160 and 2496 < PosY2 < 2912 and 3744 < PosX3 < 4160 and 2496 < PosY3 < 2912 and 3744 < PosX4 < 4160 and 2496 < PosY4 < 2912:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         # Y = 2912
 
                         elif basename1 == "2912" and basename2 == "0":
                                 print("basey == 2912 and basex == 0")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if PosX1 < 416 and 2912 < PosY1 < 3328 and PosX2 < 416 and 2912 < PosY2 < 3328 and PosX3 < 416 and 2912 < PosY3 < 3328 and PosX4 < 416 and 2912 < PosY4 < 3328:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if PosX1 < 416 and 2912 < PosY1 < 3328 and PosX2 < 416 and 2912 < PosY2 < 3328 and PosX3 < 416 and 2912 < PosY3 < 3328 and PosX4 < 416 and 2912 < PosY4 < 3328:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "2912" and basename2 == "416":
                                 print("basey == 2912 and basex == 416")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 416 < PosX1 < 832 and 2912 < PosY1 < 3328 and 416 < PosX2 < 832 and 2912 < PosY2 < 3328 and 416 < PosX3 < 832 and 2912 < PosY3 < 3328 and 416 < PosX4 < 832 and 2912 < PosY4 < 3328:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 416 < PosX1 < 832 and 2912 < PosY1 < 3328 and 416 < PosX2 < 832 and 2912 < PosY2 < 3328 and 416 < PosX3 < 832 and 2912 < PosY3 < 3328 and 416 < PosX4 < 832 and 2912 < PosY4 < 3328:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "2912" and basename2 == "832":
                                 print("basey == 2912 and basex == 832")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 832 < PosX1 < 1248 and 2912 < PosY1 < 3328 and 832 < PosX2 < 1248 and 2912 < PosY2 < 3328 and 832 < PosX3 < 1248 and 2912 < PosY3 < 3328 and 832 < PosX4 < 1248 and 2912 < PosY4 < 3328:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 832 < PosX1 < 1248 and 2912 < PosY1 < 3328 and 832 < PosX2 < 1248 and 2912 < PosY2 < 3328 and 832 < PosX3 < 1248 and 2912 < PosY3 < 3328 and 832 < PosX4 < 1248 and 2912 < PosY4 < 3328:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "2912" and basename2 == "1248":
                                 print("basey == 2912 and basex == 1248")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1248 < PosX1 < 1664 and 2912 < PosY1 < 3328 and 1248 < PosX2 < 1664 and 2912 < PosY2 < 3328 and 1248 < PosX3 < 1664 and 2912 < PosY3 < 3328 and 1248 < PosX4 < 1664 and 2912 < PosY4 < 3328:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1248 < PosX1 < 1664 and 2912 < PosY1 < 3328 and 1248 < PosX2 < 1664 and 2912 < PosY2 < 3328 and 1248 < PosX3 < 1664 and 2912 < PosY3 < 3328 and 1248 < PosX4 < 1664 and 2912 < PosY4 < 3328:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "2912" and basename2 == "1664":
                                 print("basey == 2912 and basex == 1664")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1664 < PosX1 < 2080 and 2912 < PosY1 < 3328 and 1664 < PosX2 < 2080 and 2912 < PosY2 < 3328 and 1664 < PosX3 < 2080 and 2912 < PosY3 < 3328 and 1664 < PosX4 < 2080 and 2912 < PosY4 < 3328:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1664 < PosX1 < 2080 and 2912 < PosY1 < 3328 and 1664 < PosX2 < 2080 and 2912 < PosY2 < 3328 and 1664 < PosX3 < 2080 and 2912 < PosY3 < 3328 and 1664 < PosX4 < 2080 and 2912 < PosY4 < 3328:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "2912" and basename2 == "2080":
                                 print("basey == 2912 and basex == 2080")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2080 < PosX1 < 2496 and 2912 < PosY1 < 3328 and 2080 < PosX2 < 2496 and 2912 < PosY2 < 3328 and 2080 < PosX3 < 2496 and 2912 < PosY3 < 3328 and 2080 < PosX4 < 2496 and 2912 < PosY4 < 3328:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2080 < PosX1 < 2496 and 2912 < PosY1 < 3328 and 2080 < PosX2 < 2496 and 2912 < PosY2 < 3328 and 2080 < PosX3 < 2496 and 2912 < PosY3 < 3328 and 2080 < PosX4 < 2496 and 2912 < PosY4 < 3328:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "2912" and basename2 == "2496":
                                 print("basey == 2912 and basex == 2496")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2496 < PosX1 < 2912 and 2912 < PosY1 < 3328 and 2496 < PosX2 < 2912 and 2912 < PosY2 < 3328 and 2496 < PosX3 < 2912 and 2912 < PosY3 < 3328 and 2496 < PosX4 < 2912 and 2912 < PosY4 < 3328:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2496 < PosX1 < 2912 and 2912 < PosY1 < 3328 and 2496 < PosX2 < 2912 and 2912 < PosY2 < 3328 and 2496 < PosX3 < 2912 and 2912 < PosY3 < 3328 and 2496 < PosX4 < 2912 and 2912 < PosY4 < 3328:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "2912" and basename2 == "2912":
                                 print("basey == 2912 and basex == 2912")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2912 < PosX1 < 3328 and 2912 < PosY1 < 3328 and 2912 < PosX2 < 3328 and 2912 < PosY2 < 3328 and 2912 < PosX3 < 3328 and 2912 < PosY3 < 3328 and 2912 < PosX4 < 3328 and 2912 < PosY4 < 3328:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2912 < PosX1 < 3328 and 2912 < PosY1 < 3328 and 2912 < PosX2 < 3328 and 2912 < PosY2 < 3328 and 2912 < PosX3 < 3328 and 2912 < PosY3 < 3328 and 2912 < PosX4 < 3328 and 2912 < PosY4 < 3328:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         elif basename1 == "2912" and basename2 == "3328":
                                 print("basey == 2912 and basex == 3328")
 
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3328 < PosX1 < 3744 and 2912 < PosY1 < 3328 and 3328 < PosX2 < 3744 and 2912 < PosY2 < 3328 and 3328 < PosX3 < 3744 and 2912 < PosY3 < 3328 and 3328 < PosX4 < 3744 and 2912 < PosY4 < 3328:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3328 < PosX1 < 3744 and 2912 < PosY1 < 3328 and 3328 < PosX2 < 3744 and 2912 < PosY2 < 3328 and 3328 < PosX3 < 3744 and 2912 < PosY3 < 3328 and 3328 < PosX4 < 3744 and 2912 < PosY4 < 3328:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "2912" and basename2 == "3744":
                                 print("basey == 2912 and basex == 3744")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3744 < PosX1 < 4160 and 2912 < PosY1 < 3328 and 3744 < PosX2 < 4160 and 2912 < PosY2 < 3328 and 3744 < PosX3 < 4160 and 2912 < PosY3 < 3328 and 3744 < PosX4 < 4160 and 2912 < PosY4 < 3328:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3744 < PosX1 < 4160 and 2912 < PosY1 < 3328 and 3744 < PosX2 < 4160 and 2912 < PosY2 < 3328 and 3744 < PosX3 < 4160 and 2912 < PosY3 < 3328 and 3744 < PosX4 < 4160 and 2912 < PosY4 < 3328:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         # Y = 3328
 
                         elif basename1 == "3328" and basename2 == "0":
                                 print("basey == 3328 and basex == 0")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if PosX1 < 416 and 3328 < PosY1 < 3744 and PosX2 < 416 and 3328 < PosY2 < 3744 and PosX3 < 416 and 3328 < PosY3 < 3744 and PosX4 < 416 and 3328 < PosY4 < 3744:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if PosX1 < 416 and 3328 < PosY1 < 3744 and PosX2 < 416 and 3328 < PosY2 < 3744 and PosX3 < 416 and 3328 < PosY3 < 3744 and PosX4 < 416 and 3328 < PosY4 < 3744:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3328" and basename2 == "416":
                                 print("basey == 3328 and basex == 416")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 416 < PosX1 < 832 and 3328 < PosY1 < 3744 and 416 < PosX2 < 832 and 3328 < PosY2 < 3744 and 416 < PosX3 < 832 and 3328 < PosY3 < 3744 and 416 < PosX4 < 832 and 3328 < PosY4 < 3744:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 416 < PosX1 < 832 and 3328 < PosY1 < 3744 and 416 < PosX2 < 832 and 3328 < PosY2 < 3744 and 416 < PosX3 < 832 and 3328 < PosY3 < 3744 and 416 < PosX4 < 832 and 3328 < PosY4 < 3744:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3328" and basename2 == "832":
                                 print("basey == 3328 and basex == 832")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 832 < PosX1 < 1248 and 3328 < PosY1 < 3744 and 832 < PosX2 < 1248 and 3328 < PosY2 < 3744 and 832 < PosX3 < 1248 and 3328 < PosY3 < 3744 and 832 < PosX4 < 1248 and 3328 < PosY4 < 3744:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 832 < PosX1 < 1248 and 3328 < PosY1 < 3744 and 832 < PosX2 < 1248 and 3328 < PosY2 < 3744 and 832 < PosX3 < 1248 and 3328 < PosY3 < 3744 and 832 < PosX4 < 1248 and 3328 < PosY4 < 3744:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3328" and basename2 == "1248":
                                 print("basey == 3328 and basex == 1248")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1248 < PosX1 < 1664 and 3328 < PosY1 < 3744 and 1248 < PosX2 < 1664 and 3328 < PosY2 < 3744 and 1248 < PosX3 < 1664 and 3328 < PosY3 < 3744 and 1248 < PosX4 < 1664 and 3328 < PosY4 < 3744:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1248 < PosX1 < 1664 and 3328 < PosY1 < 3744 and 1248 < PosX2 < 1664 and 3328 < PosY2 < 3744 and 1248 < PosX3 < 1664 and 3328 < PosY3 < 3744 and 1248 < PosX4 < 1664 and 3328 < PosY4 < 3744:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3328" and basename2 == "1664":
                                 print("basey == 3328 and basex == 1664")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1664 < PosX1 < 2080 and 3328 < PosY1 < 3744 and 1664 < PosX2 < 2080 and 3328 < PosY2 < 3744 and 1664 < PosX3 < 2080 and 3328 < PosY3 < 3744 and 1664 < PosX4 < 2080 and 3328 < PosY4 < 3744:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1664 < PosX1 < 2080 and 3328 < PosY1 < 3744 and 1664 < PosX2 < 2080 and 3328 < PosY2 < 3744 and 1664 < PosX3 < 2080 and 3328 < PosY3 < 3744 and 1664 < PosX4 < 2080 and 3328 < PosY4 < 3744:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3328" and basename2 == "2080":
                                 print("basey == 3328 and basex == 2080")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2080 < PosX1 < 2496 and 3328 < PosY1 < 3744 and 2080 < PosX2 < 2496 and 3328 < PosY2 < 3744 and 2080 < PosX3 < 2496 and 3328 < PosY3 < 3744 and 2080 < PosX4 < 2496 and 3328 < PosY4 < 3744:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2080 < PosX1 < 2496 and 3328 < PosY1 < 3744 and 2080 < PosX2 < 2496 and 3328 < PosY2 < 3744 and 2080 < PosX3 < 2496 and 3328 < PosY3 < 3744 and 2080 < PosX4 < 2496 and 3328 < PosY4 < 3744:
+                                                        print("Equal X")
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3328" and basename2 == "2496":
                                 print("basey == 3328 and basex == 2496")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2496 < PosX1 < 2912 and 3328 < PosY1 < 3744 and 2496 < PosX2 < 2912 and 3328 < PosY2 < 3744 and 2496 < PosX3 < 2912 and 3328 < PosY3 < 3744 and 2496 < PosX4 < 2912 and 3328 < PosY4 < 3744:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2496 < PosX1 < 2912 and 3328 < PosY1 < 3744 and 2496 < PosX2 < 2912 and 3328 < PosY2 < 3744 and 2496 < PosX3 < 2912 and 3328 < PosY3 < 3744 and 2496 < PosX4 < 2912 and 3328 < PosY4 < 3744:
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3328" and basename2 == "2912":
                                 print("basey == 3328 and basex == 2912")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2912 < PosX1 < 3328 and 3328 < PosY1 < 3744 and 2912 < PosX2 < 3328 and 3328 < PosY2 < 3744 and 2912 < PosX3 < 3328 and 3328 < PosY3 < 3744 and 2912 < PosX4 < 3328 and 3328 < PosY4 < 3744:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2912 < PosX1 < 3328 and 3328 < PosY1 < 3744 and 2912 < PosX2 < 3328 and 3328 < PosY2 < 3744 and 2912 < PosX3 < 3328 and 3328 < PosY3 < 3744 and 2912 < PosX4 < 3328 and 3328 < PosY4 < 3744:
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3328" and basename2 == "3328":
                                 print("basey == 3328 and basex == 3328")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3328 < PosX1 < 3744 and 3328 < PosY1 < 3744 and 3328 < PosX2 < 3744 and 3328 < PosY2 < 3744 and 3328 < PosX3 < 3744 and 3328 < PosY3 < 3744 and 3328 < PosX4 < 3744 and 3328 < PosY4 < 3744:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3328 < PosX1 < 3744 and 3328 < PosY1 < 3744 and 3328 < PosX2 < 3744 and 3328 < PosY2 < 3744 and 3328 < PosX3 < 3744 and 3328 < PosY3 < 3744 and 3328 < PosX4 < 3744 and 3328 < PosY4 < 3744:
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3328" and basename2 == "3744":
                                 print("basey == 3328 and basex == 3744")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3744 < PosX1 < 4160 and 3328 < PosY1 < 3744 and 3744 < PosX2 < 4160 and 3328 < PosY2 < 3744 and 3744 < PosX3 < 4160 and 3328 < PosY3 < 3744 and 3744 < PosX4 < 4160 and 3328 < PosY4 < 3744:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3744 < PosX1 < 4160 and 3328 < PosY1 < 3744 and 3744 < PosX2 < 4160 and 3328 < PosY2 < 3744 and 3744 < PosX3 < 4160 and 3328 < PosY3 < 3744 and 3744 < PosX4 < 4160 and 3328 < PosY4 < 3744:
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         # Y = 3744
 
                         elif basename1 == "3744" and basename2 == "0":
                                 print("basey == 3744 and basex == 0")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if PosX1 < 416 and 3744 < PosY1 < 4160 and PosX2 < 416 and 3744 < PosY2 < 4160 and PosX3 < 416 and 3744 < PosY3 < 4160 and PosX4 < 416 and 3744 < PosY4 < 4160:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if PosX1 < 416 and 3744 < PosY1 < 4160 and PosX2 < 416 and 3744 < PosY2 < 4160 and PosX3 < 416 and 3744 < PosY3 < 4160 and PosX4 < 416 and 3744 < PosY4 < 4160:
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3744" and basename2 == "416":
                                 print("basey == 3744 and basex == 416")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 416 < PosX1 < 832 and 3744 < PosY1 < 4160 and 416 < PosX2 < 832 and 3744 < PosY2 < 4160 and 416 < PosX3 < 832 and 3744 < PosY3 < 4160 and 416 < PosX4 < 832 and 3744 < PosY4 < 4160:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 416 < PosX1 < 832 and 3744 < PosY1 < 4160 and 416 < PosX2 < 832 and 3744 < PosY2 < 4160 and 416 < PosX3 < 832 and 3744 < PosY3 < 4160 and 416 < PosX4 < 832 and 3744 < PosY4 < 4160:
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3744" and basename2 == "832":
                                 print("basey == 3744 and basex == 832")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 832 < PosX1 < 1248 and 3744 < PosY1 < 4160 and 832 < PosX2 < 1248 and 3744 < PosY2 < 4160 and 832 < PosX3 < 1248 and 3744 < PosY3 < 4160 and 832 < PosX4 < 1248 and 3744 < PosY4 < 4160:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 832 < PosX1 < 1248 and 3744 < PosY1 < 4160 and 832 < PosX2 < 1248 and 3744 < PosY2 < 4160 and 832 < PosX3 < 1248 and 3744 < PosY3 < 4160 and 832 < PosX4 < 1248 and 3744 < PosY4 < 4160:
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3744" and basename2 == "1248":
                                 print("basey == 3744 and basex == 1248")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1248 < PosX1 < 1664 and 3744 < PosY1 < 4160 and 1248 < PosX2 < 1664 and 3744 < PosY2 < 4160 and 1248 < PosX3 < 1664 and 3744 < PosY3 < 4160 and 1248 < PosX4 < 1664 and 3744 < PosY4 < 4160:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1248 < PosX1 < 1664 and 3744 < PosY1 < 4160 and 1248 < PosX2 < 1664 and 3744 < PosY2 < 4160 and 1248 < PosX3 < 1664 and 3744 < PosY3 < 4160 and 1248 < PosX4 < 1664 and 3744 < PosY4 < 4160:
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3744" and basename2 == "1664":
                                 print("basey == 3744 and basex == 1664")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 1664 < PosX1 < 2080 and 3744 < PosY1 < 4160 and 1664 < PosX2 < 2080 and 3744 < PosY2 < 4160 and 1664 < PosX3 < 2080 and 3744 < PosY3 < 4160 and 1664 < PosX4 < 2080 and 3744 < PosY4 < 4160:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 1664 < PosX1 < 2080 and 3744 < PosY1 < 4160 and 1664 < PosX2 < 2080 and 3744 < PosY2 < 4160 and 1664 < PosX3 < 2080 and 3744 < PosY3 < 4160 and 1664 < PosX4 < 2080 and 3744 < PosY4 < 4160:
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3744" and basename2 == "2080":
                                 print("basey == 3744 and basex == 2080")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2080 < PosX1 < 2496 and 3744 < PosY1 < 4160 and 2080 < PosX2 < 2496 and 3744 < PosY2 < 4160 and 2080 < PosX3 < 2496 and 3744 < PosY3 < 4160 and 2080 < PosX4 < 2496 and 3744 < PosY4 < 4160:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2080 < PosX1 < 2496 and 3744 < PosY1 < 4160 and 2080 < PosX2 < 2496 and 3744 < PosY2 < 4160 and 2080 < PosX3 < 2496 and 3744 < PosY3 < 4160 and 2080 < PosX4 < 2496 and 3744 < PosY4 < 4160:
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3744" and basename2 == "2496":
                                 print("basey == 3744 and basex == 2496")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2496 < PosX1 < 2912 and 3744 < PosY1 < 4160 and 2496 < PosX2 < 2912 and 3744 < PosY2 < 4160 and 2496 < PosX3 < 2912 and 3744 < PosY3 < 4160 and 2496 < PosX4 < 2912 and 3744 < PosY4 < 4160:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2496 < PosX1 < 2912 and 3744 < PosY1 < 4160 and 2496 < PosX2 < 2912 and 3744 < PosY2 < 4160 and 2496 < PosX3 < 2912 and 3744 < PosY3 < 4160 and 2496 < PosX4 < 2912 and 3744 < PosY4 < 4160:
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3744" and basename2 == "2912":
                                 print("basey == 3744 and basex == 2912")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 2912 < PosX1 < 3328 and 3744 < PosY1 < 4160 and 2912 < PosX2 < 3328 and 3744 < PosY2 < 4160 and 2912 < PosX3 < 3328 and 3744 < PosY3 < 4160 and 2912 < PosX4 < 3328 and 3744 < PosY4 < 4160:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 2912 < PosX1 < 3328 and 3744 < PosY1 < 4160 and 2912 < PosX2 < 3328 and 3744 < PosY2 < 4160 and 2912 < PosX3 < 3328 and 3744 < PosY3 < 4160 and 2912 < PosX4 < 3328 and 3744 < PosY4 < 4160:
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3744" and basename2 == "3328":
                                 print("basey == 3744 and basex == 3328")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3328 < PosX1 < 3744 and 3744 < PosY1 < 4160 and 3328 < PosX2 < 3744 and 3744 < PosY2 < 4160 and 3328 < PosX3 < 3744 and 3744 < PosY3 < 4160 and 3328 < PosX4 < 3744 and 3744 < PosY4 < 4160:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3328 < PosX1 < 3744 and 3744 < PosY1 < 4160 and 3328 < PosX2 < 3744 and 3744 < PosY2 < 4160 and 3328 < PosX3 < 3744 and 3744 < PosY3 < 4160 and 3328 < PosX4 < 3744 and 3744 < PosY4 < 4160:
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
+
                         elif basename1 == "3744" and basename2 == "3744":
                                 print("basey == 3744 and basex == 3744")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
+                                        print(line)
+                                        line1 = line.split(" ")
+                                        print(line1)
+
+                                        PosX1 = int(float(line1[0]))
+                                        PosY1 = int(float(line1[1]))
+                                        PosX2 = int(float(line1[2]))
+                                        PosY2 = int(float(line1[3]))
+                                        PosX3 = int(float(line1[4]))
+                                        PosY3 = int(float(line1[5]))
+                                        PosX4 = int(float(line1[6]))
+                                        PosY4 = int(float(line1[7]))
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3744 < PosX1 < 4160 and 3744 < PosY1 < 4160 and 3744 < PosX2 < 4160 and 3744 < PosY2 < 4160 and 3744 < PosX3 < 4160 and 3744 < PosY3 < 4160 and 3744 < PosX4 < 4160 and 3744 < PosY4 < 4160:
+                                                print(PosX1)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+
+                                                line1 = line.split(" ")
+                                                print(line1)
+
+                                                PosX1 = int(float(line1[0]))
+                                                PosY1 = int(float(line1[1]))
+                                                PosX2 = int(float(line1[2]))
+                                                PosY2 = int(float(line1[3]))
+                                                PosX3 = int(float(line1[4]))
+                                                PosY3 = int(float(line1[5]))
+                                                PosX4 = int(float(line1[6]))
+                                                PosY4 = int(float(line1[7]))
+
+                                                if 3744 < PosX1 < 4160 and 3744 < PosY1 < 4160 and 3744 < PosX2 < 4160 and 3744 < PosY2 < 4160 and 3744 < PosX3 < 4160 and 3744 < PosY3 < 4160 and 3744 < PosX4 < 4160 and 3744 < PosY4 < 4160:
+                                                        print(PosX1)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
+
+                                        f.close()
 
                         # ELSE
 
                         else:
                                 print("Error")
-
-
-
-
-
-                        #with open(filename, "r") as f:
-                        #        line = f.readline()
-                        #        if "harbor" in line:
-                        #                print("Hay clase harbor")
-                        #                continue
-                        #        elif "bridge" in line:
-                        #                print("Hay clase bridge")
-                        #                continue
-                        #        elif "swimming-pool" in line:
-                        #                print("Hay clase swimming-pool")
-                        #                continue
-                        #        elif "ground-track-field" in line:
-                        #                print("Hay clase ground-track-field")
-                        #                continue
-                        #        elif "soccer-ball-field" in line:
-                        #                print("Hay clase soccer-ball-field")
-                        #                continue
-                        #        elif "tennis-court" in line:
-                        #                print("Hay clase tennis-court")
-                        #                continue
-                        #        elif "basketball-court" in line:
-                        #                print("Hay clase basketball-court")
-                        #                continue
-                        #        elif "roundabout" in line:
-                        #                print("Hay clase roundabout")
-                        #                continue
-                        #        elif "baseball-diamond" in line:
-                        #                print("Hay clase baseball-diamond")
-                        #                continue
-                        #        elif "storage-tank" in line:
-                        #                print("Hay clase storage-tank")
-                        #                continue
-                        #        else:
-                        #                print("No hay clase para eliminar")
-                        #                print(line)
-                        #                line1 = line.split(" ")
-
-                                        # if con coordenadas
-
-                        #                print(line1[9])
-                        #                line = line.replace(line1[9], ',')
-                        #                filename1 = open('docs/Prueba_Labels/' + file_name, 'w')
-                        #                filename1.write("/root/workspace/YOLOV3/data/dataset/test/ " + line)
-
-                                #while line:
-                                #        line = f.readline()
-                                #        if not line:
-                                #                continue
-                                #        elif "harbor" in line:
-                                #                print("Hay clase harbor")
-                                #                continue
-                                #        elif "bridge" in line:
-                                #                print("Hay clase bridge")
-                                #                continue
-                                #        elif "swimming-pool" in line:
-                                #                print("Hay clase swimming-pool")
-                                #                continue
-                                #        elif "ground-track-field" in line:
-                                #                print("Hay clase ground-track-field")
-                                #                continue
-                                #        elif "soccer-ball-field" in line:
-                                #                print("Hay clase soccer-ball-field")
-                                #                continue
-                                #        elif "tennis-court" in line:
-                                #                print("Hay clase tennis-court")
-                                #                continue
-                                #        elif "basketball-court" in line:
-                                #                print("Hay clase basketball-court")
-                                #                continue
-                                #        elif "roundabout" in line:
-                                #                print("Hay clase roundabout")
-                                #                continue
-                                #        elif "baseball-diamond" in line:
-                                #                print("Hay clase baseball-diamond")
-                                #                continue
-                                #        elif "storage-tank" in line:
-                                #                print("Hay clase storage-tank")
-                                #                continue
-                                #        else:
-                                #                print("No hay clase para eliminar")
-                                #                print(line)
-                                #                line1 = line.split(" ")
-                                #                print(line1[9])
-                                #                line = line.replace(line1[9], '')
-                                #                line = line.replace(" ", ",")
-                                #                filename1 = open('docs/Prueba_Labels/' + file_name, 'a')
-                                #                filename1.write(line)
