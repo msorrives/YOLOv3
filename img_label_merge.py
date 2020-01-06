@@ -93,14 +93,137 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                         f.close()
 
-                        elif basename1 == "0" and basename2 == "416":
-                                print("basey == 0 and basex == 416")
+                        elif basename1 == "832" and basename2 == "3328":
+                                print("basey == 832 and basex == 3328")
 
                                 with open(filename, "r") as f:
                                         line = f.readline()
                                         print(line)
+                                        print("Split line:")
+                                        line = line.split(" ")
+                                        print(line)
+
+                                        PosX1 = int(float(line[0]))
+                                        PosY1 = int(float(line[1]))
+                                        PosX2 = int(float(line[2]))
+                                        PosY2 = int(float(line[3]))
+                                        PosX3 = int(float(line[4]))
+                                        PosY3 = int(float(line[5]))
+                                        PosX4 = int(float(line[6]))
+                                        PosY4 = int(float(line[7]))
+                                        PosClass = line[8]
+
+                                        print(PosX1)
+                                        print(PosY1)
+                                        print(PosX2)
+                                        print(PosY2)
+                                        print(PosX3)
+                                        print(PosY3)
+                                        print(PosX4)
+                                        print(PosY4)
+
+                                        if 3328 < PosX1 < 3744 and 832 < PosY1 < 1248 and 3328 < PosX2 < 3744 and 832 < PosY2 < 1248 and 3328 < PosX3 < 3744 and 832 < PosY3 < 1248 and 3328 < PosX4 < 3744 and 832 < PosY4 < 1248:
+
+                                                print("Replace? 1")
+                                                coord_X = PosX1 - 3328
+                                                coord_Y = PosY1 - 832
+                                                coord_H = PosX2 - PosX1
+                                                coord_W = PosY4 - PosY1
+
+                                                print("Coordenadas x, y, h, w:")
+                                                print(coord_X)
+                                                print(coord_Y)
+                                                print(str(float(coord_H)))
+                                                print(str(float(coord_W)))
+
+                                                print("Linia replaced: ")
+                                                coord_X_2 = line[0].replace(str(PosX1), str(coord_X))
+                                                print(coord_X_2)
+                                                coord_Y_2 = line[1].replace(str(PosY1), str(coord_Y))
+                                                print(coord_Y_2)
+
+                                                new_list = [int(float(coord_X_2)), int(float(coord_Y_2)), int(float(coord_H)), int(float(coord_W)), PosClass]
+                                                print(new_list)
+
+                                                new_line = ""
+
+                                                for ele in new_list:
+
+                                                        new_line += ele + ","
+
+                                                print(new_line)
+
+                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+
+                                        while line:
+                                                print("Dentro bucle")
+                                                line = f.readline()
+
+                                                if not line:
+                                                        continue
+                                                print("Split line:")
+                                                line = line.split(" ")
+                                                print(line)
+
+                                                PosX1 = int(float(line[0]))
+                                                PosY1 = int(float(line[1]))
+                                                PosX2 = int(float(line[2]))
+                                                PosY2 = int(float(line[3]))
+                                                PosX3 = int(float(line[4]))
+                                                PosY3 = int(float(line[5]))
+                                                PosX4 = int(float(line[6]))
+                                                PosY4 = int(float(line[7]))
+                                                PosClass = line[8]
+
+                                                if 3328 < PosX1 < 3744 and 832 < PosY1 < 1248 and 3328 < PosX2 < 3744 and 832 < PosY2 < 1248 and 3328 < PosX3 < 3744 and 832 < PosY3 < 1248 and 3328 < PosX4 < 3744 and 832 < PosY4 < 1248:
+
+                                                        print("Replace? 2")
+                                                        coord_X = PosX1 - 3328
+                                                        coord_Y = PosY1 - 832
+                                                        coord_H = PosX2 - PosX1
+                                                        coord_W = PosY4 - PosY1
+
+                                                        print("Coordenadas x, y, h, w:")
+                                                        print(coord_X)
+                                                        print(coord_Y)
+                                                        print(str(float(coord_H)))
+                                                        print(str(float(coord_W)))
+
+                                                        print("Linia replaced: ")
+                                                        coord_X_2 = line[0].replace(str(PosX1), str(coord_X))
+                                                        print(coord_X_2)
+                                                        coord_Y_2 = line[1].replace(str(PosY1), str(coord_Y))
+                                                        print(coord_Y_2)
+
+                                                        new_list = [int(float(coord_X_2)), int(float(coord_Y_2)), int(coord_H), int(coord_W), PosClass]
+                                                        print(new_list)
+
+                                                        new_line = ""
+
+                                                        for ele in new_list:
+                                                                new_line += str(ele) + ","
+
+                                                        print(new_line)
+
+                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(new_line + "\n")
+
+                                                        else:
+                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(new_line + "\n")
+
+                                        f.close()
+
+                        else:
+                                print("Error")
+
+"""
+                        elif basename1 == "0" and basename2 == "416":   ################
+                                print("basey == 0 and basex == 416")
+
+                                with open(filename, "r") as f:
+                                        line = f.readline()
                                         line1 = line.split(" ")
-                                        print(line1)
 
                                         PosX1 = int(float(line1[0]))
                                         PosY1 = int(float(line1[1]))
@@ -120,8 +243,23 @@ for img in glob.glob('docs/Prueba/*.png'):
                                         print(PosX4)
                                         print(PosY4)
 
+                                        print("Replace?")
                                         if 416 < PosX1 < 832 and PosY1 < 416 and 416 < PosX2 < 832 and PosY2 < 416 and 416 < PosX3 < 832 and PosY3 < 416 and 416 < PosX4 < 832 and PosY4 < 416:
-                                                print(PosX1)
+
+                                                print("Replace? 1")
+
+                                                #PosX1_2 = PosX1 - 416
+                                                #print(PosX1_2)
+                                                #new_line = line1.replace(str(PosX1), str(PosX1_2))
+                                                #print(new_line)
+                                                #print("yes? 1")
+
+                                                #PosX2_2 = PosX2 - 416
+                                                #new_line = line1.replace(PosX2, PosX2_2)
+                                                #PosX3_2 = PosX3 - 416
+                                                #new_line = line1.replace(PosX3, PosX3_2)
+                                                #PosX4_2 = PosX4 - 416
+                                                #new_line = line1.replace(PosX4, PosX4_2)
 
                                                 filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
 
@@ -135,7 +273,6 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 line1 = line.split(" ")
                                                 print(line1)
 
-                                                PosX1 = int(float(line1[0]))
                                                 PosY1 = int(float(line1[1]))
                                                 PosX2 = int(float(line1[2]))
                                                 PosY2 = int(float(line1[3]))
@@ -144,9 +281,22 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 PosX4 = int(float(line1[6]))
                                                 PosY4 = int(float(line1[7]))
 
+                                                print("Replace??")
                                                 if 416 < PosX1 < 832 and PosY1 < 416 and 416 < PosX2 < 832 and PosY2 < 416 and 416 < PosX3 < 832 and PosY3 < 416 and 416 < PosX4 < 832 and PosY4 < 416:
-                                                        print("Equal X")
-                                                        print(PosX1)
+
+                                                        print("Replace? 2")
+                                                        #PosX1_2 = PosX1 - 416
+                                                        #print(PosX1_2)
+                                                        #new_line = line1.replace(str(PosX1), str(PosX1_2))
+                                                        #print(new_line)
+                                                        #print("yes? 2")
+
+                                                        #PosX2_2 = PosX2 - 416
+                                                        #new_line = line1.replace(PosX2, PosX2_2)
+                                                        #PosX3_2 = PosX3 - 416
+                                                        #new_line = line1.replace(PosX3, PosX3_2)
+                                                        #PosX4_2 = PosX4 - 416
+                                                        #new_line = line1.replace(PosX4, PosX4_2)
 
                                                         if file_name in glob.glob('docs/Prueba_Labels'):
                                                                 filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
@@ -154,7 +304,9 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                                 filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(line)
 
                                         f.close()
+"""
 
+"""
                         elif basename1 == "0" and basename2 == "832":
                                 print("basey == 0 and basex == 832")
 
@@ -431,13 +583,25 @@ for img in glob.glob('docs/Prueba/*.png'):
                                         print(PosY4)
 
                                         if 2496 < PosX1 < 2912 and PosY1 < 416 and 2496 < PosX2 < 2912 and PosY2 < 416 and 2496 < PosX3 < 2912 and PosY3 < 416 and 2496 < PosX4 < 2912 and PosY4 < 416:
-                                                print(PosX1)
+                                                print("Replace 1")
+
+                                                PosX1_2 = PosX1 - 416
+                                                print(PosX1_2)
+                                                new_line = line1.replace(str(PosX1), str(PosX1_2))
+                                                print(new_line)
+                                                #PosX2_2 = PosX2 - 416
+                                                #new_line = line1.replace(PosX2, PosX2_2)
+                                                #PosX3_2 = PosX3 - 416
+                                                #new_line = line1.replace(PosX3, PosX3_2)
+                                                #PosX4_2 = PosX4 - 416
+                                                #new_line = line1.replace(PosX4, PosX4_2)
 
                                                 filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(line)
 
                                         while line:
                                                 print("Dentro bucle")
                                                 line = f.readline()
+                                                print("Replace?")
 
                                                 if not line:
                                                         continue
@@ -455,8 +619,18 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 PosY4 = int(float(line1[7]))
 
                                                 if 2496 < PosX1 < 2912 and PosY1 < 416 and 2496 < PosX2 < 2912 and PosY2 < 416 and 2496 < PosX3 < 2912 and PosY3 < 416 and 2496 < PosX4 < 2912 and PosY4 < 416:
-                                                        print("Equal X")
-                                                        print(PosX1)
+                                                        print("Replace 2")
+
+                                                        PosX1_2 = PosX1 - 416
+                                                        print(PosX1_2)
+                                                        new_line = line1.replace(str(PosX1), str(PosX1_2))
+                                                        print(new_line)
+                                                        # PosX2_2 = PosX2 - 416
+                                                        # new_line = line1.replace(PosX2, PosX2_2)
+                                                        # PosX3_2 = PosX3 - 416
+                                                        # new_line = line1.replace(PosX3, PosX3_2)
+                                                        # PosX4_2 = PosX4 - 416
+                                                        # new_line = line1.replace(PosX4, PosX4_2)
 
                                                         if file_name in glob.glob('docs/Prueba_Labels'):
                                                                 filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(line)
@@ -6238,4 +6412,5 @@ for img in glob.glob('docs/Prueba/*.png'):
                         # ELSE
 
                         else:
-                                print("Error")
+                                print("Error") 
+"""
