@@ -84,7 +84,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 for ele in new_list:
 
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -202,7 +202,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -320,7 +320,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -436,7 +436,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -553,7 +553,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -670,7 +670,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -789,7 +789,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -907,7 +907,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -1025,7 +1025,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -1145,7 +1145,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -1265,7 +1265,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -1383,7 +1383,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -1501,7 +1501,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -1621,7 +1621,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -1741,7 +1741,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -1860,7 +1860,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -1979,7 +1979,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -2097,7 +2097,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -2216,7 +2216,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -2336,7 +2336,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -2456,7 +2456,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -2572,7 +2572,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -2688,7 +2688,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -2804,7 +2804,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -2920,7 +2920,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -3036,7 +3036,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -3152,7 +3152,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -3268,7 +3268,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                         new_line = ""
 
                                         for ele in new_list:
-                                                new_line += ele + ","
+                                                new_line += str(ele) + ","
 
                                         print(new_line)
 
@@ -3384,7 +3384,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -3500,7 +3500,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -3618,7 +3618,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -3734,7 +3734,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -3850,7 +3850,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -3966,7 +3966,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -4082,7 +4082,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -4198,7 +4198,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -4314,7 +4314,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -4430,7 +4430,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -4546,7 +4546,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -4662,7 +4662,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -4780,7 +4780,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -4896,7 +4896,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -5012,7 +5012,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -5128,7 +5128,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -5244,7 +5244,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -5360,7 +5360,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -5476,7 +5476,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -5592,7 +5592,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -5708,7 +5708,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -5824,7 +5824,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -5942,7 +5942,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -6058,7 +6058,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -6174,7 +6174,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -6290,7 +6290,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -6406,7 +6406,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -6522,7 +6522,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -6638,7 +6638,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -6754,7 +6754,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -6870,7 +6870,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -6986,7 +6986,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -7104,7 +7104,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -7220,7 +7220,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -7336,7 +7336,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -7451,7 +7451,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -7567,7 +7567,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -7683,7 +7683,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -7800,7 +7800,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -7916,7 +7916,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -8034,7 +8034,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -8150,7 +8150,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -8268,7 +8268,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -8384,7 +8384,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -8500,7 +8500,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -8616,7 +8616,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -8732,7 +8732,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -8848,7 +8848,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -8964,7 +8964,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -9080,7 +9080,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -9196,7 +9196,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -9312,7 +9312,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -9430,7 +9430,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -9546,7 +9546,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -9662,7 +9662,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -9778,7 +9778,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -9894,7 +9894,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -10010,7 +10010,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -10126,7 +10126,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -10242,7 +10242,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -10358,7 +10358,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -10474,7 +10474,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -10592,7 +10592,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -10708,7 +10708,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -10824,7 +10824,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -10940,7 +10940,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -11056,7 +11056,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -11172,7 +11172,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -11288,7 +11288,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -11404,7 +11404,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -11520,7 +11520,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -11636,7 +11636,7 @@ for img in glob.glob('docs/Prueba/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += ele + ","
+                                                        new_line += str(ele) + ","
 
                                                 print(new_line)
 
@@ -11705,4 +11705,4 @@ for img in glob.glob('docs/Prueba/*.png'):
                         # ELSE
 
                         else:
-                                print("Error")  
+                                print("Error")
