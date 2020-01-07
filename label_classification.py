@@ -13,7 +13,7 @@ for filename in glob.glob('docs/Prueba_Labels/*.txt'):
         file_name = name + extension
         print(name)
         #print (file_name)
-        i = 0
+
         with open(filename, "r") as f:
                 line = f.readline()
                 if "harbor" in line:
