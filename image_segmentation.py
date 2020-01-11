@@ -29,7 +29,7 @@ for file in glob.glob('data/dataset/train_original/*.png'):
                     break
                 else:
                     print("File not exist")
-                    output_directory = 'data/dataset/train'
+                    output_directory = 'data/dataset/train_segmented'
                     if crop_img.shape[0] < 416 or crop_img.shape[1] < 416:
                         break
                     else:
