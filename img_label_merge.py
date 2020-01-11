@@ -8,7 +8,7 @@ import shutil
 import random
 import argparse
 
-for img in glob.glob('docs/Prueba/*.png'):
+for img in glob.glob('data/dataset/train/*.png'):
         cv2.imread(img)
         img_name, img_extension = os.path.splitext(os.path.basename(img))
         name1 = img_name.split("_")
@@ -18,7 +18,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
         print("bucle filename for") 
 
-        for filename in glob.glob('docs/DOTA29_Prueba_Labels/*.txt'):
+        for filename in glob.glob('data/dataset/labels_original/*.txt'):
                 text_name, text_extension = os.path.splitext(os.path.basename(filename))
                 file_name = text_name + text_extension
                 label_name = img_name + text_extension
@@ -88,7 +88,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -139,16 +139,16 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,'a').write(new_line + "\n")
 
                                         f.close()
 
-                        elif basename1 == "0" and basename2 == "416":   ################
+                        elif basename1 == "0" and basename2 == "416":
                                 print("basey == 0 and basex == 416")
 
                                 with open(filename, "r") as f:
@@ -206,7 +206,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -259,12 +259,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -324,7 +324,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -375,12 +375,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -440,7 +440,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write( new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -491,12 +491,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -557,7 +557,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -609,12 +609,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                 f.close()
 
@@ -674,7 +674,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write( new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -727,12 +727,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge')                                                                :
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -793,7 +793,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write( new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -845,12 +845,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                 f.close()
 
@@ -911,7 +911,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -962,12 +962,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -1029,7 +1029,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write( new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1082,12 +1082,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -1149,7 +1149,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1200,12 +1200,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -1269,7 +1269,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write( new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1320,12 +1320,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -1387,7 +1387,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write( new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1440,12 +1440,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -1505,7 +1505,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1558,12 +1558,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -1625,7 +1625,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1678,12 +1678,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -1745,7 +1745,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1797,12 +1797,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -1864,7 +1864,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1917,12 +1917,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -1983,7 +1983,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2035,12 +2035,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                 f.close()
 
@@ -2101,7 +2101,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2153,12 +2153,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                 f.close()
 
@@ -2220,7 +2220,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2273,12 +2273,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                 f.close()
 
@@ -2340,7 +2340,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2391,12 +2391,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                 f.close()
 
@@ -2460,7 +2460,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2511,12 +2511,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                 f.close()
 
@@ -2576,7 +2576,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2627,12 +2627,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                 f.close()
 
@@ -2692,7 +2692,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2743,12 +2743,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                 f.close()
 
@@ -2808,7 +2808,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2859,12 +2859,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -2924,7 +2924,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2975,12 +2975,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -3040,7 +3040,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3091,12 +3091,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -3156,7 +3156,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3207,12 +3207,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -3272,7 +3272,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                         print(new_line)
 
-                                        filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                        filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3323,12 +3323,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -3388,7 +3388,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3439,12 +3439,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -3504,7 +3504,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3555,12 +3555,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -3622,7 +3622,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3673,12 +3673,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -3738,7 +3738,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3789,12 +3789,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -3854,7 +3854,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3905,12 +3905,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -3970,7 +3970,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4021,12 +4021,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -4086,7 +4086,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4137,12 +4137,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -4202,7 +4202,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4253,12 +4253,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -4318,7 +4318,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4369,12 +4369,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -4434,7 +4434,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4485,12 +4485,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -4550,7 +4550,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4601,12 +4601,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                 f.close()
 
@@ -4666,7 +4666,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4717,12 +4717,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                 f.close()
 
@@ -4784,7 +4784,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4835,12 +4835,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -4900,7 +4900,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4951,12 +4951,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -5016,7 +5016,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5067,12 +5067,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -5132,7 +5132,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5183,12 +5183,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -5248,7 +5248,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5299,12 +5299,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -5364,7 +5364,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5415,12 +5415,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -5480,7 +5480,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5531,12 +5531,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -5596,7 +5596,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5647,12 +5647,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -5712,7 +5712,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5763,12 +5763,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -5828,7 +5828,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5879,12 +5879,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -5946,7 +5946,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5997,12 +5997,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -6062,7 +6062,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6113,12 +6113,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -6178,7 +6178,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6229,12 +6229,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -6294,7 +6294,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6345,12 +6345,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -6410,7 +6410,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6461,12 +6461,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -6526,7 +6526,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6577,12 +6577,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -6642,7 +6642,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6693,12 +6693,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -6758,7 +6758,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6809,12 +6809,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -6874,7 +6874,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6925,12 +6925,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -6990,7 +6990,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7041,12 +7041,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -7108,7 +7108,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7159,12 +7159,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -7224,7 +7224,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7275,12 +7275,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -7340,7 +7340,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7391,12 +7391,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
                                         f.close()
 
                         elif basename1 == "2496" and basename2 == "1248":
@@ -7455,7 +7455,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7506,12 +7506,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -7571,7 +7571,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7622,12 +7622,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -7687,7 +7687,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7739,12 +7739,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -7804,7 +7804,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7855,12 +7855,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -7920,7 +7920,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7971,12 +7971,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -8038,7 +8038,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8089,12 +8089,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -8154,7 +8154,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8205,12 +8205,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -8272,7 +8272,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8323,12 +8323,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -8388,7 +8388,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8439,12 +8439,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -8504,7 +8504,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8555,12 +8555,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -8620,7 +8620,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8671,12 +8671,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -8736,7 +8736,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8787,12 +8787,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -8852,7 +8852,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8903,12 +8903,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -8968,7 +8968,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9019,12 +9019,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -9084,7 +9084,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9135,12 +9135,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -9200,7 +9200,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9251,12 +9251,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -9316,7 +9316,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9367,12 +9367,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -9434,7 +9434,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9485,12 +9485,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -9550,7 +9550,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9601,12 +9601,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -9666,7 +9666,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9717,12 +9717,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                 f.close()
 
@@ -9782,7 +9782,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9833,12 +9833,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -9898,7 +9898,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9949,12 +9949,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -10014,7 +10014,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10065,12 +10065,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -10130,7 +10130,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10181,12 +10181,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -10246,7 +10246,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10297,12 +10297,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -10362,7 +10362,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10413,12 +10413,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,  'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,  'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name,  'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,  'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -10478,7 +10478,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10529,12 +10529,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                 f.close()
 
@@ -10596,7 +10596,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10647,12 +10647,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -10712,7 +10712,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10763,12 +10763,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -10828,7 +10828,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10879,12 +10879,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -10944,7 +10944,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10995,12 +10995,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -11060,7 +11060,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -11111,12 +11111,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -11176,7 +11176,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -11227,12 +11227,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -11292,7 +11292,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -11343,12 +11343,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -11408,7 +11408,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -11459,12 +11459,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -11524,7 +11524,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -11575,12 +11575,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
@@ -11640,7 +11640,7 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                 print(new_line)
 
-                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -11693,12 +11693,12 @@ for img in glob.glob('docs/Prueba/*.png'):
 
                                                         print(new_line)
 
-                                                        if file_name in glob.glob('docs/Prueba_Labels'):
+                                                        if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
 
                                                         else:
-                                                                filename1 = open('docs/Prueba_Labels/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
 
                                         f.close()
 
