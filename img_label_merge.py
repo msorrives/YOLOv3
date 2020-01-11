@@ -8,7 +8,7 @@ import shutil
 import random
 import argparse
 
-for img in glob.glob('data/dataset/train/*.png'):
+for img in glob.glob('data/dataset/train_segmented/*.png'):
         cv2.imread(img)
         img_name, img_extension = os.path.splitext(os.path.basename(img))
         name1 = img_name.split("_")
