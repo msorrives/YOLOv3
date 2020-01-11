@@ -8,7 +8,7 @@ import shutil
 import random
 import argparse
 
-for filename in glob.glob('data/dataset/labels_classification/*.txt'):
+for filename in glob.glob('data/dataset/labels_class_convert/*.txt'):
 
             line = open(filename, "r").readline()
             if not line:
