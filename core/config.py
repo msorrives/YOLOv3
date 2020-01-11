@@ -25,7 +25,7 @@ __C.YOLO                      = edict()
 
 # Set the class name "./data/classes/coco.names"
 #__C.YOLO.CLASSES              = "./data/classes/yymnist.names"
-__C.YOLO.CLASSES              = "./data/classes/dota.names"
+__C.YOLO.CLASSES              = "./data/classes/dota29.names"
 #__C.YOLO.ANCHORS              = "./data/anchors/basline_anchors.txt"
 __C.YOLO.ANCHORS              = "./data/anchors/dota29_anchors.txt"
 __C.YOLO.STRIDES              = [8, 16, 32]
