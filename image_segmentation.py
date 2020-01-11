@@ -3,7 +3,7 @@ import os
 import glob
 import numpy
 
-for file in glob.glob('docs/DOTA29_Prueba/*.png'):
+for file in glob.glob('data/dataset/train_original/*.png'):
     img = cv2.imread(file)
     height = img.shape[0]
     width = img.shape[1]
@@ -13,7 +13,6 @@ for file in glob.glob('docs/DOTA29_Prueba/*.png'):
         for y in range(0, img.shape[0], 416):
             for x in range(0, img.shape[1], 416):
                 #croppedImage = img[startRow:endRow, startCol:endCol]
-                #crop_img = img[y:y + h, x:x + w]
                 crop_img = img[y:y + 416, x:x + 416]
                 name, extension = os.path.splitext(os.path.basename(file))
                 print(name)
@@ -30,7 +29,7 @@ for file in glob.glob('docs/DOTA29_Prueba/*.png'):
                     break
                 else:
                     print("File not exist")
-                    output_directory = 'docs/Prueba'
+                    output_directory = 'data/dataset/train'
                     if crop_img.shape[0] < 416 or crop_img.shape[1] < 416:
                         break
                     else:
