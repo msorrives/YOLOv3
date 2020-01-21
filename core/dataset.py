@@ -1,16 +1,3 @@
-#! /usr/bin/env python
-# coding=utf-8
-#================================================================
-#   Copyright (C) 2019 * Ltd. All rights reserved.
-#
-#   Editor      : VIM
-#   File name   : dataset.py
-#   Author      : YunYang1994
-#   Created date: 2019-03-15 18:05:03
-#   Description :
-#
-#================================================================
-
 import os
 import cv2
 import random
@@ -195,6 +182,8 @@ class Dataset(object):
         return inter_area / union_area
 
     def preprocess_true_boxes(self, bboxes):
+        #label = [np.zeros((self.train_output_sizes[i], self.train_output_sizes[i], self.anchor_per_scale,
+        #                   5 + self.num_classes)) for i in range(3)]
 
         label = [np.zeros((self.train_output_sizes[i], self.train_output_sizes[i], self.anchor_per_scale,
                            5 + self.num_classes)) for i in range(3)]
@@ -244,6 +233,12 @@ class Dataset(object):
                 best_detect = int(best_anchor_ind / self.anchor_per_scale)
                 best_anchor = int(best_anchor_ind % self.anchor_per_scale)
                 xind, yind = np.floor(bbox_xywh_scaled[best_detect, 0:2]).astype(np.int32)
+                xind, yind = abs(xind), abs(yind)
+
+                if yind >= label[best_detect].shape[1]:
+                    yind = label[best_detect].shape[1] - 1
+                if xind >= label[best_detect].shape[0]:
+                    xind = label[best_detect].shape[0] - 1
 
                 label[best_detect][yind, xind, best_anchor, :] = 0
                 label[best_detect][yind, xind, best_anchor, 0:4] = bbox_xywh
