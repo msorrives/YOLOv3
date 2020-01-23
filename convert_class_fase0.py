@@ -25,109 +25,38 @@ for filename in glob.glob('data/dataset/labels_classification/*.txt'):
         if smallVehicle in line:
             print("Hay clase small-vehicle")
             print(line.replace("small-vehicle", "0"))
-            line1 = line.replace("small-vehicle", "0")
-            filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line1)
-            continue
+            line = line.replace("small-vehicle", "0")
+            filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line)
 
-        elif largeVehicle in line:
+
+        if largeVehicle in line:
             print("Hay clase large-vehicle")
             print(line.replace("large-vehicle", "1"))
-            line1 = line.replace("large-vehicle", "1")
-            filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line1)
-            continue
+            line = line.replace("large-vehicle", "1")
+            filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line)
 
-        elif helicopter in line:
+
+        if helicopter in line:
             print("Hay clase helicopter")
             print(line.replace("helicopter", "2"))
-            line1 = line.replace("helicopter", "2")
-            filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line1)
-            continue
+            line = line.replace("helicopter", "2")
+            filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line)
 
-        elif plane in line:
+
+        if plane in line:
             print("Hay clase plane")
             print(line.replace("plane", "3"))
-            line1 = line.replace("plane", "3")
-            filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line1)
-            continue
+            line = line.replace("plane", "3")
+            filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line)
 
-        elif ship in line:
+
+        if ship in line:
             print("Hay clase ship")
             print(line.replace("ship", "4"))
-            line1 = line.replace("ship", "4")
-            filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line1)
-            continue
+            line = line.replace("ship", "4")
+            filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line)
+
 
         f.close()
-
-        """
-        while smallVehicle or largeVehicle or helicopter or plane or ship in line:
-
-            if smallVehicle in line:
-                print("Hay clase small-vehicle")
-                print(line.replace("small-vehicle", "0"))
-                line1 = line.replace("small-vehicle", "0")
-                filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line1)
-
-            if largeVehicle in line:
-                print("Hay clase large-vehicle")
-                print(line.replace("large-vehicle", "1"))
-                line1 = line.replace("large-vehicle", "1")
-                filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line1)
-
-            if helicopter in line:
-                print("Hay clase helicopter")
-                print(line.replace("helicopter", "2"))
-                line1 = line.replace("helicopter", "2")
-                filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line1)
-
-            if plane in line:
-                print("Hay clase plane")
-                print(line.replace("plane", "3"))
-                line1 = line.replace("plane", "3")
-                filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line1)
-
-            if ship in line:
-                print("Hay clase ship")
-                print(line.replace("ship", "4"))
-                line1 = line.replace("ship", "4")
-                filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line1)
-        """
-
-
-
-"""
-            if smallVehicle in line:
-                print("Hay clase small-vehicle")
-                print(line.replace("small-vehicle", "0"))
-                line1 = line.replace("small-vehicle", "0")
-                filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line1)
-
-            if largeVehicle in line:
-                print("Hay clase large-vehicle")
-                print(line.replace("large-vehicle", "1"))
-                line1 = line.replace("large-vehicle", "1")
-                filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line1)
-
-            if helicopter in line:
-                print("Hay clase helicopter")
-                print(line.replace("helicopter", "2"))
-                line1 = line.replace("helicopter", "2")
-                filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line1)
-                #continue
-
-            if plane in line:
-                print("Hay clase plane")
-                print(line.replace("plane", "3"))
-                line1 = line.replace("plane", "3")
-                filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line1)
-                #continue
-
-            if ship in line:
-                print("Hay clase ship")
-                print(line.replace("ship", "4"))
-                line1 = line.replace("ship", "4")
-                filename1 = open('data/dataset/labels_class_convert/' + file_name, 'w').write(line1)
-                #continue
-"""
 
 
