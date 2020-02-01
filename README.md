@@ -1,4 +1,4 @@
-## [TensorFlow2.x-YOLOv3](https://github.com/YunYang1994/ai-notebooks/blob/master/YOLOv3.md)
+## [YOLOv3]
 --------------------
 A minimal tensorflow implementation of YOLOv3, with support for training, inference and evaluation.
 

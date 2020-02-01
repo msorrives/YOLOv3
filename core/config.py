@@ -1,16 +1,3 @@
-#! /usr/bin/env python
-# coding=utf-8
-#================================================================
-#   Copyright (C) 2019 * Ltd. All rights reserved.
-#
-#   Editor      : VIM
-#   File name   : config.py
-#   Author      : YunYang1994
-#   Created date: 2019-02-28 13:06:54
-#   Description :
-#
-#================================================================
-
 from easydict import EasyDict as edict
 
 
@@ -29,6 +16,8 @@ __C.YOLO.CLASSES              = "./data/classes/dota29.names"
 #__C.YOLO.ANCHORS              = "./data/anchors/basline_anchors.txt"
 __C.YOLO.ANCHORS              = "./data/anchors/dota29_anchors.txt"
 __C.YOLO.STRIDES              = [8, 16, 32]
+#__C.YOLO.STRIDES              = [2, 4, 8]
+#__C.YOLO.ANCHOR_PER_SCALE     = 3
 __C.YOLO.ANCHOR_PER_SCALE     = 3
 __C.YOLO.IOU_LOSS_THRESH      = 0.5
 
@@ -45,8 +34,6 @@ __C.TRAIN.LR_INIT             = 1e-3
 __C.TRAIN.LR_END              = 1e-6
 __C.TRAIN.WARMUP_EPOCHS       = 2
 __C.TRAIN.EPOCHS              = 30
-
-
 
 # TEST options
 __C.TEST                      = edict()

@@ -8,7 +8,7 @@ import shutil
 import random
 import argparse
 
-for img in glob.glob('data/dataset/train_segmented/*.png'):
+for img in glob.glob('data/dataset/train_segmented/*.jpg'):
         cv2.imread(img)
         img_name, img_extension = os.path.splitext(os.path.basename(img))
         name1 = img_name.split("_")
@@ -86,9 +86,9 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
 
                                                         new_line += str(ele) + ","
 
-                                                print(new_line)
+                                                new_line = new_line[:-1]
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -135,16 +135,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
 
-                                                        print(new_line)
+                                                        new_line = new_line[:-1]
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,'a').write(new_line + " " )
 
                                         f.close()
 
@@ -202,11 +202,12 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
 
-                                                print(new_line)
+                                                new_line = new_line[:-1]
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -255,16 +256,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
 
-                                                        print(new_line)
+                                                        new_line = new_line[:-1]
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -320,11 +321,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
 
-                                                print(new_line)
+                                                new_line = new_line[:-1]
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -371,16 +372,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
 
-                                                        print(new_line)
+                                                        new_line = new_line[:-1]
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -436,11 +437,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
 
-                                                print(new_line)
+                                                new_line = new_line[:-1]
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -487,16 +488,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
 
-                                                        print(new_line)
+                                                        new_line = new_line[:-1]
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -553,11 +554,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -605,16 +608,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
 
-                                                        print(new_line)
+                                                        new_line = new_line[:-1]
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                 f.close()
 
@@ -670,11 +673,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -723,16 +728,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
 
-                                                        print(new_line)
+                                                        new_line = new_line[:-1]
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge')                                                                :
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -789,11 +794,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -843,14 +850,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                 f.close()
 
@@ -909,9 +918,9 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
-                                                print(new_line)
+                                                new_line = new_line[:-1]
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -960,14 +969,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -1027,9 +1038,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1080,14 +1093,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -1147,9 +1162,9 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
-                                                print(new_line)
+                                                new_line = new_line[:-1]
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1198,14 +1213,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -1267,9 +1284,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1318,14 +1337,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,'a').write(new_line + " ")
 
                                         f.close()
 
@@ -1385,9 +1406,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write( new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1438,14 +1461,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -1503,9 +1528,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1556,14 +1583,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -1623,9 +1652,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1676,14 +1707,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -1743,9 +1776,9 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
-                                                print(new_line)
+                                                new_line = new_line[:-1]
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1795,14 +1828,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -1862,9 +1897,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -1915,14 +1952,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -1981,9 +2020,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2033,14 +2074,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                 f.close()
 
@@ -2099,9 +2142,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2151,14 +2196,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                 f.close()
 
@@ -2218,9 +2265,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2271,14 +2320,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                 f.close()
 
@@ -2338,9 +2389,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2389,14 +2442,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                 f.close()
 
@@ -2458,9 +2513,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2509,14 +2566,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                 f.close()
 
@@ -2574,9 +2633,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2625,14 +2686,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                 f.close()
 
@@ -2690,9 +2753,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2741,14 +2806,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                 f.close()
 
@@ -2806,9 +2873,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2857,14 +2926,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -2922,9 +2993,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -2973,14 +3046,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -3038,9 +3113,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3089,14 +3166,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -3154,9 +3233,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3205,14 +3286,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -3270,9 +3353,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                         for ele in new_list:
                                                 new_line += str(ele) + ","
 
+                                        new_line = new_line[:-1]
+
                                         print(new_line)
 
-                                        filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                        filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3321,14 +3406,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -3386,9 +3473,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3437,14 +3526,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -3502,9 +3593,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3553,14 +3646,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -3620,9 +3715,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3671,14 +3768,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -3736,9 +3835,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3787,14 +3888,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -3852,9 +3955,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -3903,14 +4008,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -3968,9 +4075,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4019,14 +4128,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -4084,9 +4195,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4135,14 +4248,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -4200,9 +4315,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4251,14 +4368,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -4316,9 +4435,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4367,14 +4488,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -4432,9 +4555,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4483,14 +4608,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -4548,9 +4675,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4599,14 +4728,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                 f.close()
 
@@ -4664,9 +4795,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4715,14 +4848,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                 f.close()
 
@@ -4782,9 +4917,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4833,14 +4970,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -4898,9 +5037,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -4949,14 +5090,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -5014,9 +5157,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5065,14 +5210,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -5130,9 +5277,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5181,14 +5330,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -5246,9 +5397,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5297,14 +5450,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -5362,9 +5517,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5413,14 +5570,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -5478,9 +5637,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5529,14 +5690,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -5594,9 +5757,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5643,16 +5808,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -5710,9 +5877,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5761,14 +5930,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -5826,9 +5997,11 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 for ele in new_list:
                                                         new_line += str(ele) + ","
 
+                                                new_line = new_line[:-1]
+
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5877,14 +6050,16 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         for ele in new_list:
                                                                 new_line += str(ele) + ","
 
+                                                        new_line = new_line[:-1]
+
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -5942,11 +6117,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -5993,16 +6170,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -6058,11 +6237,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6109,16 +6290,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -6174,11 +6357,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6225,16 +6410,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -6290,11 +6477,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6341,16 +6530,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -6406,11 +6597,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6457,16 +6650,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -6522,11 +6717,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6573,16 +6770,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -6638,11 +6837,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6689,16 +6890,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -6754,11 +6957,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6805,16 +7010,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -6870,11 +7077,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -6921,16 +7130,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -6986,11 +7197,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7037,16 +7250,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -7104,11 +7319,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7155,16 +7372,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -7220,11 +7439,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7271,16 +7492,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -7336,11 +7559,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7387,16 +7612,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
                                         f.close()
 
                         elif basename1 == "2496" and basename2 == "1248":
@@ -7451,11 +7678,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7502,16 +7731,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -7567,11 +7798,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7618,16 +7851,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -7683,11 +7918,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7735,16 +7972,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -7800,11 +8039,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7851,16 +8092,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -7910,17 +8153,19 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 coord_X_2 = line[0].replace(str(PosX1), str(coord_X))
                                                 coord_Y_2 = line[1].replace(str(PosY1), str(coord_Y))
 
-                                                new_list = [int(float(coord_X_2)), int(float(coord_Y_2)), int(coord_H), int(coord_W), PosClass]
+                                                new_list = [int(float(coord_X_2)), int(float(coord_Y_2)), int(coord_H),  int(coord_W), PosClass]
                                                 print(new_list)
 
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -7967,16 +8212,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -8034,11 +8281,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8085,16 +8334,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -8150,11 +8401,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8201,16 +8454,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -8268,11 +8523,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8319,16 +8576,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -8384,11 +8643,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8435,16 +8696,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -8500,11 +8763,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8551,16 +8816,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -8616,11 +8883,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8667,16 +8936,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -8732,11 +9003,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8783,16 +9056,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -8848,11 +9123,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -8899,16 +9176,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -8964,11 +9243,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9015,16 +9296,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -9080,11 +9363,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9131,16 +9416,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -9196,11 +9483,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9247,16 +9536,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -9312,11 +9603,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9363,16 +9656,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -9430,11 +9725,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9481,16 +9778,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -9546,11 +9845,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9597,16 +9898,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -9662,11 +9965,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9713,16 +10018,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                 f.close()
 
@@ -9778,11 +10085,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9829,16 +10138,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -9894,11 +10205,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -9945,16 +10258,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -10010,11 +10325,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10061,16 +10378,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -10126,11 +10445,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10177,16 +10498,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -10242,11 +10565,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10293,16 +10618,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -10358,11 +10685,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10409,16 +10738,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,  'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,  'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,  'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name,  'a').write(new_line + " ")
 
                                         f.close()
 
@@ -10474,11 +10805,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10525,16 +10858,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                 f.close()
 
@@ -10592,11 +10927,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10643,16 +10980,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -10708,11 +11047,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10759,16 +11100,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -10824,11 +11167,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10875,16 +11220,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -10940,11 +11287,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -10991,16 +11340,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -11056,11 +11407,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -11107,16 +11460,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -11172,11 +11527,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -11223,16 +11580,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -11288,11 +11647,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -11339,16 +11700,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -11404,11 +11767,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -11455,16 +11820,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -11520,11 +11887,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -11571,16 +11940,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -11636,11 +12007,13 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                 new_line = ""
 
                                                 for ele in new_list:
-                                                        new_line += str(ele) + ","
+                                                    new_line += str(ele) + ","
+
+                                                new_line = new_line[:-1]
 
                                                 print(new_line)
 
-                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                         while line:
                                                 print("Dentro bucle")
@@ -11689,16 +12062,18 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
                                                         new_line = ""
 
                                                         for ele in new_list:
-                                                                new_line += str(ele) + ","
+                                                            new_line += str(ele) + ","
+
+                                                        new_line = new_line[:-1]
 
                                                         print(new_line)
 
                                                         if file_name in glob.glob('data/dataset/labels_image_merge'):
 
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'w').write(new_line + " ")
 
                                                         else:
-                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + "\n")
+                                                                filename1 = open('data/dataset/labels_image_merge/' + label_name, 'a').write(new_line + " ")
 
                                         f.close()
 
@@ -11706,3 +12081,4 @@ for img in glob.glob('data/dataset/train_segmented/*.png'):
 
                         else:
                                 print("Error")
+

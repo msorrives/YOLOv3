@@ -1,16 +1,3 @@
-#! /usr/bin/env python
-# coding=utf-8
-#================================================================
-#   Copyright (C) 2019 * Ltd. All rights reserved.
-#
-#   Editor      : VIM
-#   File name   : test.py
-#   Author      : YunYang1994
-#   Created date: 2019-07-19 10:29:34
-#   Description :
-#
-#================================================================
-
 import cv2
 import os
 import shutil
@@ -40,6 +27,7 @@ input_layer  = tf.keras.layers.Input([INPUT_SIZE, INPUT_SIZE, 3])
 feature_maps = YOLOv3(input_layer)
 
 bbox_tensors = []
+
 for i, fm in enumerate(feature_maps):
     bbox_tensor = decode(fm, i)
     bbox_tensors.append(bbox_tensor)
@@ -48,23 +36,30 @@ model = tf.keras.Model(input_layer, bbox_tensors)
 model.load_weights("./yolov3")
 
 with open(cfg.TEST.ANNOT_PATH, 'r') as annotation_file:
+
     for num, line in enumerate(annotation_file):
         annotation = line.strip().split()
         image_path = annotation[0]
         image_name = image_path.split('/')[-1]
         image = cv2.imread(image_path)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        name = image_name.split('.')[-2]
         bbox_data_gt = np.array([list(map(int, box.split(','))) for box in annotation[1:]])
 
         if len(bbox_data_gt) == 0:
-            bboxes_gt=[]
-            classes_gt=[]
+                bboxes_gt=[]
+                classes_gt=[]
+
         else:
+
             bboxes_gt, classes_gt = bbox_data_gt[:, :4], bbox_data_gt[:, 4]
-        ground_truth_path = os.path.join(ground_truth_dir_path, str(num) + '.txt')
+
+        ground_truth_path = os.path.join(ground_truth_dir_path, str(name) + '.txt')
 
         print('=> ground truth of %s:' % image_name)
+
         num_bbox_gt = len(bboxes_gt)
+
         with open(ground_truth_path, 'w') as f:
             for i in range(num_bbox_gt):
                 class_name = CLASSES[classes_gt[i]]
@@ -72,8 +67,11 @@ with open(cfg.TEST.ANNOT_PATH, 'r') as annotation_file:
                 bbox_mess = ' '.join([class_name, xmin, ymin, xmax, ymax]) + '\n'
                 f.write(bbox_mess)
                 print('\t' + str(bbox_mess).strip())
+
         print('=> predict result of %s:' % image_name)
-        predict_result_path = os.path.join(predicted_dir_path, str(num) + '.txt')
+
+        predict_result_path = os.path.join(predicted_dir_path, str(name) + '.txt')
+
         # Predict Process
         image_size = image.shape[:2]
         image_data = utils.image_preporcess(np.copy(image), [INPUT_SIZE, INPUT_SIZE])
@@ -84,7 +82,6 @@ with open(cfg.TEST.ANNOT_PATH, 'r') as annotation_file:
         pred_bbox = tf.concat(pred_bbox, axis=0)
         bboxes = utils.postprocess_boxes(pred_bbox, image_size, INPUT_SIZE, cfg.TEST.SCORE_THRESHOLD)
         bboxes = utils.nms(bboxes, cfg.TEST.IOU_THRESHOLD, method='nms')
-
 
         if cfg.TEST.DECTECTED_IMAGE_PATH is not None:
             image = utils.draw_bbox(image, bboxes)

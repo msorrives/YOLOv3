@@ -8,21 +8,20 @@ import shutil
 import random
 import argparse
 
-for img in glob.glob('data/dataset/train_segmented/*.png'):
+for img in glob.glob('data/dataset/train_segmented/*.jpg'):
         cv2.imread(img)
         img_name, img_extension = os.path.splitext(os.path.basename(img))
-        name1 = img_name.split("_")
-        basename = name1[0]
-        basename1 = name1[1]
-        basename2 = name1[2]
 
-        print("bucle filename for")
+        print("bucle 1")
 
-        for filename in glob.glob('data/dataset/labels_class_convert/*.txt'):
+        for filename in glob.glob('data/dataset/labels_classification/*.txt'):
             text_name, text_extension = os.path.splitext(os.path.basename(filename))
+            print("bucle 2")
 
-            if basename == text_name:
-                open('data/dataset/train/', 'w').write(img)
+            if img_name == text_name:
+                #output_directory = 'data/dataset/train/'
+                output_directory = 'data/dataset/test/'
+                shutil.copy(img, output_directory)
 
 
 

@@ -3,7 +3,8 @@ import os
 import glob
 import numpy
 
-for file in glob.glob('data/dataset/train_original/*.png'):
+for file in glob.glob('data/dataset/test_original/*.png'):
+#for file in glob.glob('data/dataset/train_original/*.png'):
     img = cv2.imread(file)
     height = img.shape[0]
     width = img.shape[1]
@@ -15,13 +16,13 @@ for file in glob.glob('data/dataset/train_original/*.png'):
                 #croppedImage = img[startRow:endRow, startCol:endCol]
                 crop_img = img[y:y + 416, x:x + 416]
                 name, extension = os.path.splitext(os.path.basename(file))
-                print(name)
-                print(extension)
+                new_extension = '.jpg'
+
                 name1 = name + "_" + str(y)
                 name2 = name1 + "_" + str(x)
                 print(str(y))
                 print(str(x))
-                filename = name2 + extension
+                filename = name2 + new_extension
                 print(filename)
 
                 if os.path.isfile(filename):

@@ -16,7 +16,8 @@ for filename in glob.glob('data/dataset/labels_class_convert/*.txt'):
             line1 = str(line)
             line2 = line1[:-1]
 
-            file_name = "dota29_train.txt"
+            #file_name = "dota29_train.txt"
+            file_name = "dota29_test.txt"
             print(line2)
 
 

@@ -11,7 +11,8 @@ import argparse
 for filename in glob.glob('data/dataset/labels_image_merge/*.txt'):
         name, extension = os.path.splitext(os.path.basename(filename))
         file_name = name + extension
-        file_img = name + ".png"
+        #file_img = name + ".png"
+        file_img = name + ".jpg"
         print(name)
         #print (file_name)
 
@@ -52,11 +53,11 @@ for filename in glob.glob('data/dataset/labels_image_merge/*.txt'):
                         print(line)
 
                         line1 = str(line)
-                        line2 = line1[:-1]
 
-                        path = "/root/workspace/YOLOV3/data/dataset/train/" + file_img + " "
+                        #path = "/root/workspace/YOLOV3/data/dataset/train/" + file_img + " "
+                        path = "/root/workspace/YOLOV3/data/dataset/test/" + file_img + " "
 
-                        filename1 = open('data/dataset/labels_classification/' + file_name, 'w').write(path + line2)
+                        filename1 = open('data/dataset/labels_classification/' + file_name, 'w').write(path + line1)
 
                 while line:
                         line = f.readline()
@@ -96,17 +97,16 @@ for filename in glob.glob('data/dataset/labels_image_merge/*.txt'):
                                 print("No hay clase para eliminar")
                                 print(line)
 
-                                if file_name in glob.glob('data/dataset/labels_image_merge'):
+                                if file_name in glob.glob('data/dataset/labels_classification'):
 
                                         line1 = str(line)
-                                        line2 = line1[:-1]
 
-                                        path = "/root/workspace/YOLOV3/data/dataset/train/" + file_img + " "
+                                        #path = "/root/workspace/YOLOV3/data/dataset/train/" + file_img + " "
+                                        path = "/root/workspace/YOLOV3/data/dataset/test/" + file_img + " "
 
-                                        filename1 = open('data/dataset/labels_classification/' + file_name, 'w').write(path + line2)
+                                        filename1 = open('data/dataset/labels_classification/' + file_name, 'w').write(path + line1)
 
                                 else:
                                         line1 = str(line)
-                                        line2 = line1[:-1]
 
-                                        filename1 = open('data/dataset/labels_classification/' + file_name, 'a').write(line2)
+                                        filename1 = open('data/dataset/labels_classification/' + file_name, 'a').write(line1)
